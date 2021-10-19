@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    {{ partial "head.html" . }}
+    {{ block "head" . }}{{ end }}
+    <title>{{ .Title }}</title>
+</head>
+<body class="font-Gotham text-body" style="background-color: #FBF9F8;">
+{{ partial "navbar.html" . }}
+<main>
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "footer.html" . }}
+</body>
+</html>

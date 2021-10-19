@@ -1,0 +1,30 @@
+{
+  "name": "giz-paga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datasketch/giz-paga.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/datasketch/giz-paga/issues"
+  },
+  "homepage": "https://github.com/datasketch/giz-paga#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.17"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@tailwindcss/aspect-ratio": "^0.3.0"
+  }
+}
