@@ -2,10 +2,28 @@
     <img class="h-28 lg:h-24" src="/images/general/logo-gobierno-abierto.png" alt="logo gobierno abierto">
     <nav class="text-white uppercase font-medium lg:w-10/12">
         <ul class="flex flex-col lg:items-center lg:flex-row lg:justify-around duration-300">
-            <li><a class="hover:text-blue-light duration-300" href="{{ relref . "_index.md" }}">Inicio</a></li>
-            <li><a class="hover:text-blue-light duration-300" href="#">Seguimiento al plan</a></li>
-            <li><a class="hover:text-blue-light duration-300" href="#">¿Cómo subir avances?</a></li>
-            <li><button class="uppercase py-2 px-4 rounded" style="background-color: #787D80;">Iniciar Sesión</button></li>
+            {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+            <li class="menu">
+                <p>
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </p>
+                <ul class="submenu">
+                    {{ range .Children }}
+                    <li>
+                        <a class="hover:text-blue-light duration-300" href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </li>
+            {{ else }}
+            <li>
+                <a class="hover:text-blue-light duration-300" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+            <button class="uppercase py-2 px-4 rounded" style="background-color: #787D80;">Iniciar Sesión</button>
         </ul>
     </nav>
 </header>

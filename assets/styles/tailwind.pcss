@@ -20,6 +20,16 @@
     }
 }
 
-@layer components {}
+@layer components {
+  .menu {
+    @apply relative duration-300;
+  }
+  .submenu {
+    @apply absolute opacity-0 invisible bg-grey-dark border-t p-3 -left-14 top-8 w-72 text-center duration-300;
+  }
+  .menu:hover .submenu {
+    @apply visible opacity-100 duration-300;
+  }
+}
 
 @layer utilities {}

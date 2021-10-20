@@ -1,5 +1,4 @@
 baseURL = '/'
+defaultContentLanguage = "es"
 languageCode = 'es'
 title = 'GIZ - PAGA'
-defaultContentLanguage = "es"
-taxonomies = []
