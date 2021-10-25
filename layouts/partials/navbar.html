@@ -1,5 +1,7 @@
 <header class="bg-body flex items-center justify-between">
-    <img class="h-20 lg:h-24" src="/images/general/logo-gobierno-abierto.png" alt="logo gobierno abierto">
+    <a href="{{ relref . "_index.md" }}">
+        <img class="h-20 lg:h-24" src="/images/general/logo-gobierno-abierto.png" alt="logo gobierno abierto">
+    </a>
     <nav class="text-white uppercase font-medium lg:w-10/12">
         <!-- DESKTOP MENU -->
         <ul class="hidden lg:flex flex-col lg:items-center lg:flex-row lg:justify-around duration-300">
@@ -45,8 +47,8 @@
                 <details>
                     <summary>Seguimiento al plan</summary>
                     <ul>
-                        <li class="my-4"><a href="{{ relref . " primer-plan.md" }}">Primer plan de acción</a></li>
-                        <li class="mb-4"><a href="{{ relref . " segundo-plan.md" }}">Segundo plan de acción</a></li>
+                        <li class="my-8"><a href="{{ relref . " primer-plan.md" }}">Primer plan de acción</a></li>
+                        <li class="mb-8"><a href="{{ relref . " segundo-plan.md" }}">Segundo plan de acción</a></li>
                     </ul>
                 </details>
             </li>
