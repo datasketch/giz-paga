@@ -30,6 +30,49 @@
   .menu:hover .submenu {
     @apply visible opacity-100 duration-300;
   }
+  .menu-button {
+    @apply relative cursor-pointer lg:hidden z-50 mr-6;
+  }
+  .menu-icon {
+    @apply relative;
+  }
+  .menu-icon,
+  .menu-icon::before,
+  .menu-icon::after {
+    @apply bg-white block w-8;
+    height: 3px;
+    transition: all 0.3s ease;
+  }
+  .menu-icon::before,
+  .menu-icon::after {
+    @apply absolute left-0;
+    content: "";
+  }
+  .menu-icon::before {
+    @apply top-2;
+  }
+  .menu-icon::after {
+    @apply -top-2;
+  }
+  .menu-icon--active {
+    background-color: transparent !important;
+  }
+  .menu-icon--active::before,
+  .menu-icon--active::after {
+    top: 0 !important;
+  }
+  .menu-icon--active::before {
+    transform: rotate(-135deg) !important;
+  }
+  .menu-icon--active::after {
+    transform: rotate(135deg) !important;
+  }
+  .nav-mobile {
+    @apply block absolute top-0 -left-full z-50 w-full px-8 py-20 bg-body lg:hidden duration-300;
+  }
+  .nav-mobile--active {
+    @apply left-0;
+  }
 }
 
 @layer utilities {}

@@ -1,14 +1,16 @@
 <header class="bg-body flex items-center justify-between">
-    <img class="h-28 lg:h-24" src="/images/general/logo-gobierno-abierto.png" alt="logo gobierno abierto">
+    <img class="h-20 lg:h-24" src="/images/general/logo-gobierno-abierto.png" alt="logo gobierno abierto">
     <nav class="text-white uppercase font-medium lg:w-10/12">
-        <ul class="flex flex-col lg:items-center lg:flex-row lg:justify-around duration-300">
+        <!-- DESKTOP MENU -->
+        <ul class="hidden lg:flex flex-col lg:items-center lg:flex-row lg:justify-around duration-300">
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
             {{ $menu_item_url := .URL | relLangURL }}
             {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
             {{ if eq $menu_item_url $page_url }}
             <li>
-                <a class="text-blue-light font-medium duration-300" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                <a class="text-blue-light font-medium duration-300" href="{{ .URL }}" title="{{ .Title }}">{{ .Name
+                    }}</a>
             </li>
             {{ else }}
             {{ if .HasChildren }}
@@ -34,5 +36,29 @@
             {{ end }}
             <button class="uppercase py-2 px-4" style="background-color: #787D80;">Iniciar Sesión</button>
         </ul>
+        <!-- DESKTOP MENU END -->
+
+        <!-- MOBILE MENU -->
+        <ul class="nav-mobile">
+            <li class="mb-8"><a href="{{ relref . " _index.md" }}">Inicio</a></li>
+            <li class="mb-8">
+                <details>
+                    <summary>Seguimiento al plan</summary>
+                    <ul>
+                        <li class="my-4"><a href="{{ relref . " primer-plan.md" }}">Primer plan de acción</a></li>
+                        <li class="mb-4"><a href="{{ relref . " segundo-plan.md" }}">Segundo plan de acción</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li class="mb-8"><a href="{{ relref . " como-subir-avances.md" }}">¿Como subir avances?</a></li>
+            <button class="uppercase py-2 px-4" style="background-color: #787D80;">Iniciar Sesión</button>
+        </ul>
+        <!-- MOBILE MENU END -->
+
+        <!-- HAMBURGUER BUTTON -->
+        <button class="menu-button">
+            <span class="menu-icon"></span>
+        </button>
+        <!-- HAMBURGUER BUTTON END -->
     </nav>
 </header>
