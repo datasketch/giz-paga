@@ -14,10 +14,8 @@
     </main>
     {{ partial "footer.html" . }}
     {{ block "js" . }}{{ end }}
-    {{ define "js" }}
     {{ $default := resources.Get "js/default.js" | js.Build (dict "minify" true) }}
     <script src="{{ $default.Permalink }}"></script>
-    {{ end }}
 </body>
 
 </html>
