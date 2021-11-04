@@ -5,7 +5,9 @@ module.exports = {
     options: {
       safelist: [
         'menu-icon--active',
-        'nav-mobile--active'
+        'nav-mobile--active',
+        'button-download',
+        'button-download--link',
       ]
     }
   },
