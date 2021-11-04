@@ -95,4 +95,12 @@
         </div>
     </div>
 </div>
+<script>
+    const buttonDownload = document.querySelector('.button-download');
+    const buttonDownloadLink = document.querySelector('.button-download--link');
+
+    buttonDownload.addEventListener('click', function(e) {
+        buttonDownloadLink.classList.toggle('hidden');
+    })
+</script>
 {{ end }}
