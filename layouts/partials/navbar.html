@@ -1,4 +1,4 @@
-<header class="bg-body">
+<header class="bg-body fixed w-full z-50">
     <div class="flex items-center justify-between 2xl:container mx-auto">
         <a href="{{ relref . "_index.md" }}">
             <img class="h-20 lg:h-24" src="/images/general/logo-gobierno-abierto.png" alt="logo gobierno abierto">
@@ -23,7 +23,7 @@
                         <span>{{ .Name }}</span>
                     </p>
                     <ul class="submenu">
-                        {{ range first 1 .Children }}
+                        {{ range .Children }}
                         <li>
                             <a class="hover:text-blue-light duration-300" href="{{ .URL }}">{{ .Name }}</a>
                         </li>
