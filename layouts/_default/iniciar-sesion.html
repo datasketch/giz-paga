@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="bg-blue pt-32 pb-12 lg:pt-40 lg:pb-20 lg:px-28 xl:pt-48 xl:pb-24 xl:px-32">
+        <div class="mx-auto w-10/12 md:w-6/12 lg:mx-0 lg:w-full text-center lg:text-left">
+            <h1 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6 lg:mb-8 xl:mb-10">
+                REGISTRO <br> DE AVANCE
+            </h1>
+            <p class="xl:text-lg text-white mb-4 lg:mb-6 xl:mb-8">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet
+                dolore magna aliquam erat volutpat.
+            </p>
+            <p class="xl:text-lg text-white mb-4 lg:mb-6 xl:mb-8">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet
+                dolore magna aliquam erat volutpat.
+            </p>
+            <a class="py-2 px-6 font-bold text-blue bg-white uppercase" href="{{ relref . "como-subir-avances.md" }}">Ir a registro de avance</a>
+        </div>
+    </div>
+    <div class="py-12 lg:pt-40 lg:pb-20 xl:pt-48 xl:pb-24 mx-auto w-10/12 md:w-6/12 lg:w-8/12 xl:w-6/12"
+        style="background-color: #FBF9F8;">
+        <div class="text-center">
+            <h3 class="text-orange font-bold text-xl lg:text-2xl xl:text-3xl mb-3 lg:mb-4 xl:mb-5">
+                Iniciar sesión
+            </h3>
+            <p class="mb-6 lg:mb-8 xl:mb-10">
+                Si tienes problemas con tus credenciales, por favor escríbenos a <span
+                    class="font-bold">correo@correo.gob.ec.</span>
+            </p>
+        </div>
+        <form class="w-full mb-4 lg:mb-6 xl:mb-8" action="#" method="GET">
+            <div class="xl:mb-10">
+                <label for="correo" class="block text-blue xl:text-lg font-bold mb-2">Correo electrónico</label>
+                <input placeholder="Correo electrónico" class="py-2 px-4 w-full outline-none" type="email" id="correo"
+                    required style="background-color: #E9E7E6;">
+            </div>
+            <div class="xl:mb-12">
+                <label for="contraseña" class="block text-blue xl:text-lg font-bold mb-2">Contraseña</label>
+                <input placeholder="Contraseña" class="py-2 px-4 w-full outline-none" type="password" id="contraseña"
+                    required style="background-color: #E9E7E6;">
+            </div>
+            <div class="text-center xl:mb-8">
+                <button class="py-2 px-4 text-white uppercase bg-orange xl:text-lg" type="submit">Iniciar
+                    Sesión</button>
+            </div>
+        </form>
+        <a class="block font-bold xl:text-lg underline text-center" href="#">¿Olvidaste tu contraseña?</a>
+    </div>
+</div>
+{{ end }}
