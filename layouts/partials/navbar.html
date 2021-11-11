@@ -12,7 +12,7 @@
                 {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
                 {{ if eq $menu_item_url $page_url }}
                 <li>
-                    <a class="text-blue-light font-medium duration-300" href="{{ .URL }}" title="{{ .Title }}">{{ .Name
+                    <a class="text-blue-light font-medium duration-300" href="{{ .URL }}">{{ .Name
                         }}</a>
                 </li>
                 {{ else }}
@@ -49,7 +49,7 @@
                         <summary>Seguimiento al plan</summary>
                         <ul>
                             <li class="my-8"><a href="{{ relref . " primer-plan.md" }}">Primer plan de acción</a></li>
-                            <!-- <li class="mb-8"><a href="{{ relref . " segundo-plan.md" }}">Segundo plan de acción</a></li> -->
+                            <li class="mb-8"><a href="{{ relref . " segundo-plan.md" }}">Segundo plan de acción</a></li>
                         </ul>
                     </details>
                 </li>

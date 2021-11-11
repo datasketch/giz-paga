@@ -1,64 +1,120 @@
 {{ define "main" }}
 <div class="grid grid-cols-1 lg:grid-cols-12">
     <div
-        class="lg:col-start-1 lg:col-end-13 bg-blue-dark pt-48 pb-16 md:pt-56 md:pb-16 lg:pt-64 lg:pb-24 xl:pt-72 xl:pb-32">
-        <div class="text-center">
-            <h1
-                class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold text-blue-dark bg-white py-2 lg:py-4 mb-12 md:mb-20">
-                i PLAN DE ACCIÓN
-            </h1>
-            <div class="button-download" href="#" style="background-color: #FBF9F8;">
-                Descargar el plan
-                <img class="h-2 ml-3" src="/images/icons/chevron-down.svg" alt="down arrow">
-                <ul class="button-download--link hidden" style="background-color: #FBF9F8;">
-                    <li class="mb-2"><a href="/archives/Plan español.pdf" download>Español</a></li>
-                    <li><a href="/archives/Plan inglés.pdf" download>Ingles</a></li>
-                </ul>
-            </div>
+        class="bg-blue-dark pt-36 pb-16 lg:pt-48 lg:pb-28 lg:px-24 xl:px-28 text-center lg:text-left lg:col-start-1 lg:col-end-9">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase font-bold text-white mb-4 md:mb-6 lg:mb-8">
+            i PLAN DE ACCIÓN
+        </h1>
+        <div class="button-download" style="background-color: #FBF9F8;">
+            Descargar el plan
+            <img class="h-2 ml-3" src="/images/icons/chevron-down.svg" alt="down arrow">
+            <ul class="button-download--link hidden normal-case text-center" style="background-color: #FBF9F8;">
+                <li class="mb-2"><a href="/archives/Plan español.pdf" download>Descargar en Español</a></li>
+                <li><a href="/archives/Plan inglés.pdf" download>Descargar en Ingles</a></li>
+            </ul>
         </div>
+    </div>
+    <div
+        class="lg:col-start-9 lg:col-end-13 p-8 lg:px-12 xl:px-20 text-center lg:text-left py-12 lg:pt-36 lg:pb-12 grid place-items-center">
+        <p class="font-medium lg:text-lg xl:text-xl w-10/12 md:w-8/12 lg:w-full mx-auto text-center lg:text-left">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat.
+        </p>
     </div>
     <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
         <div class="text-center mb-6 md:mb-8 lg:mb-10 xl:mb-12 mx-auto w-10/12">
-            <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 text-grey-dark">
-                Seguimiento a Compromisos
+            <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 text-grey-dark text-center">
+                Conoce el avance
             </h2>
             <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8">Explora la implementación de compromisos que hacen parte del Plan
             </p>
         </div>
         {{ partial "how-to.html" . }}
     </div>
-    <div class="py-16 lg:py-20 xl:py-24 lg:col-start-1 lg:col-end-13 bg-blue">
-        <div
-            class="w-10/12 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-5/12 mx-auto text-center text-white  mb-6 lg:mb-10 xl:mb-12">
-            <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-3 lg:mb-4 xl:mb-6">
+    <div class="py-16 lg:py-20 xl:py-24 lg:px-24 xl:px-28 lg:col-start-1 lg:col-end-9">
+        <h2
+            class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 lg:mb-6 xl:mb-10 text-blue text-center lg:text-left">
+            ¿Qué son los indicadores?
+        </h2>
+        <p
+            class="mx-auto lg:mx-0 font-medium lg:text-lg xl:text-xl w-10/12 md:w-8/12 text-center lg:text-left mb-4 lg:mb-6 xl:mb-10 lg:w-11/12">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+            vulputate velit esse molestie consequat
+        </p>
+        <div class="text-center lg:text-left">
+            <p class="font-bold lg:text-lg xl:text-xl mb-4 lg:mb-6">Conoce la metodología de selección de indicadores
+            </p>
+            <a href="#"
+                class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mb-4 lg:mb-6 xl:mb-8">
+                DESCARGAR METODOLOGÍA</a>
+        </div>
+    </div>
+    <div class="py-16 lg:py-20 xl:py-24 lg:col-start-9 lg:col-end-13 bg-blue grid place-items-center">
+        <div class="text-center lg:text-left text-white xl:px-24 w-10/12 md:w-8/12 lg:w-full lg:px-16">
+            <h2 class="block lg:text-lg xl:text-xl font-bold mb-3 lg:mb-4 xl:mb-6">
                 Histórico de Indicadores
             </h2>
-            <p class="lg:text-lg xl:text-xl font-medium">
+            <p class="xl:text-lg font-medium mb-6 lg:mb-10 xl:mb-12">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                 laoreet
                 dolore magna aliquam erat volutpat
             </p>
-        </div>
-        <div
-            class="grid place-items-center text-center w-11/12 lg:w-10/12 xl:w-9/12 mx-auto gap-6 lg:gap-8 xl:gap-12"> 
-            <p class="uppercase py-3 px-6" style="background-color: #FBF9F8;">Octubre 22 de 2021</p>
+            <p class="inline-block text-black font-medium uppercase py-3 px-6" style="background-color: #FBF9F8;">
+                Octubre 22 de 2021</p>
         </div>
     </div>
-    <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-7 grid place-items-center">
-        <div class="w-11/12 lg:w-8/12 xl:w-7/12 mx-auto">
-            <h2
-                class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-1 lg:mb-2 xl:mb-3 text-grey-dark">
+    <div class="py-16 lg:py-20 xl:py-24 lg:px-24 xl:px-28 lg:col-start-1 lg:col-end-9"
+        style="background-color: #E6E5E8;">
+        <div class="text-center lg:text-left w-10/12 md:w-8/12 lg:w-full mx-auto">
+            <h2 class="block text-xl lg:text-2xl xl:text-3xl font-bold mb-1 lg:mb-2 xl:mb-3 text-blue-dark">
                 Conoce los datos
             </h2>
-            <p class="lg:text-lg xl:text-xl font-medium mb-8 lg:mb-10 xl:mb-12">
-                Accede a los datos con los que se realiza la implementación de los indicadores de monitoreo, seguimiento
-                y evaluación de cada uno de los compromisos
+            <p class="lg:text-lg xl:text-xl font-medium mb-5 lg:mb-6 xl:mb-7">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet
+                dolore magna aliquam erat volutpat
             </p>
-            <a class="uppercase py-3 px-6 bg-grey-dark text-white"
-                href="/excel/2021-10-22 respuestas a formularios.xlsx" download>CONOCER LOS DATOS</a>
+            <a class="inline-block uppercase py-3 px-6 bg-blue-dark text-white mb-6 lg:mb-8 xl:mb-10" href="#">DESCARGAR
+                DATOS</a>
+            <p class="font-bold lg:text-lg xl:text-xl mb-4 lg:mb-6">Conoce la evidencias de cada compromiso</p>
+            <a href="#" class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer">CONOCER MÁS</a>
         </div>
     </div>
-    <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-7 lg:col-end-13 bg-orange">
+    <div class="py-16 lg:py-20 xl:py-24 lg:col-start-9 lg:col-end-13 bg-blue-dark grid place-items-center">
+        <div class="text-center lg:text-left text-white xl:px-24 w-10/12 md:w-8/12 lg:w-full lg:px-16">
+            <h2 class="block lg:text-lg xl:text-xl font-bold mb-3 lg:mb-4 xl:mb-6">
+                Contacta a los responsables de cada compromiso
+            </h2>
+            <p class="xl:text-lg font-medium mb-6 lg:mb-10 xl:mb-12">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat
+            </p>
+            <a class="inline-block text-black font-medium uppercase py-3 px-6" style="background-color: #FBF9F8;">
+                MÁS INFORMACIÓN</a>
+        </div>
+    </div>
+    <div class="py-16 lg:py-20 xl:py-24 lg:px-24 xl:px-28 lg:col-start-1 lg:col-end-9">
+        <div class="text-center lg:text-left w-10/12 md:w-8/12 lg:w-full mx-auto">
+            <h2 class="block text-xl lg:text-2xl xl:text-3xl font-bold mb-1 lg:mb-2 xl:mb-3 text-orange">
+                Comparte tu opinión
+            </h2>
+            <p class="lg:text-lg xl:text-xl font-medium mb-5 lg:mb-6 xl:mb-7">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet
+                dolore magna aliquam erat volutpat
+            </p>
+            <a href="#" class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer">FORMULARIO</a>
+        </div>
+    </div>
+    <picture class="lg:col-start-9 lg:col-end-13">
+        <source srcset="/images/seguimiento-plan/primer-plan-accion/comparte-opinion@2x.png"
+            media="(min-width: 1024px)">
+        <img class="w-full h-full object-cover object-center"
+            srcset="/images/seguimiento-plan/primer-plan-accion/comparte-opinion.png" alt="comparte opinion">
+    </picture>
+    <!-- <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-7 lg:col-end-13 bg-orange">
         <div class="w-11/12 lg:w-8/12 xl:w-7/12 mx-auto text-white inline-flex flex-col justify-between h-full">
             <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 lg:mb-6 xl:mb-8">
                 Metodología de <br> selección de <br> indicadores
@@ -66,37 +122,13 @@
             <a class="inline-block w-auto mx-auto uppercase py-3 px-6 text-grey-dark bg-white"
                 href="/archives/Metodología de selección de indicadores PAGA.pdf" download>DESCARGAR LA METODOLOGÍA</a>
         </div>
-    </div>
-    <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-7 grid place-items-center bg-blue-dark">
-        <div class="w-11/12 lg:w-8/12 xl:w-7/12 mx-auto inline-flex flex-col justify-between h-full text-white">
-            <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-8 lg:mb-10 xl:mb-12">
-                Contacta a los responsables de cada compromiso
-            </h2>
-            <a class="inline-block w-auto mx-auto uppercase py-3 px-6 text-grey-dark bg-white" href="{{ relref . "segundo-plan.md" }}">MÁS INFORMACIÓN</a>
-        </div>
-    </div>
-    <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-7 lg:col-end-13 bg-white">
-        <div class="w-11/12 lg:w-8/12 xl:w-7/12 mx-auto inline-flex flex-col justify-between h-full">
-            <h2
-                class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-1 lg:mb-2 xl:mb-3 text-grey-dark">
-                Comparte tu opinión
-            </h2>
-            <p class="lg:text-lg xl:text-xl font-medium mb-8 lg:mb-10 xl:mb-12">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet
-                dolore magna aliquam erat volutpat
-            </p>
-            <a class="inline-block w-auto mx-auto uppercase py-3 px-6 bg-grey-dark text-white"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfgKeBf_pZRRgqhVRCczCMq082TSeGE0YZLgLa8ElE5RfDcug/viewform"
-                target="_blank">FORMULARIO</a>
-        </div>
-    </div>
+    </div> -->
 </div>
 <script>
     const buttonDownload = document.querySelector('.button-download');
     const buttonDownloadLink = document.querySelector('.button-download--link');
 
-    buttonDownload.addEventListener('click', function(e) {
+    buttonDownload.addEventListener('click', function (e) {
         buttonDownloadLink.classList.toggle('hidden');
     })
 </script>

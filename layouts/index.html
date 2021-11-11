@@ -1,27 +1,48 @@
 {{ define "main" }}
 <div class="grid grid-cols-1 lg:grid-cols-12">
-    <div class="bg-blue-dark pt-36 pb-16 lg:pt-40 lg:pb-20 xl:pt-44 xl:pb-24 text-center lg:col-start-1 lg:col-end-9">
-        <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase font-bold mb-4 lg:mb-8 xl:mb-10"
+    <div class="bg-blue-dark pt-36 pb-16 lg:pt-40 lg:pb-14 text-center lg:col-start-1 lg:col-end-9">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase font-bold mb-6 lg:mb-10 xl:mb-12"
             style="color: #3B3F66;">
             Ecuador
-            <span class="block normal-case text-white text-xl lg:text-2xl xl:text-3xl font-medium">Plan de Acción de
-                Gobierno Abierto</span>
-            <span class="block normal-case text-white text-xl lg:text-2xl xl:text-3xl font-medium">2019-2022</span>
         </h2>
         <h1
-            class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold text-blue-dark bg-white py-2 lg:py-4 mb-4 lg:mb-8 xl:mb-10">
+            class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase font-bold text-blue-dark bg-white py-4 lg:py-6 mb-6 lg:mb-10 xl:mb-14">
+            <span class="block text-lg lg:text-xl font-normal">ESTAMOS EN <strong>ETAPA DE IMPLEMENTACIÓN</strong>
+                DEL</span>
             i PLAN DE ACCIÓN
         </h1>
-        <span class="block normal-case text-white text-xl lg:text-2xl xl:text-3xl font-medium">
-            ESTAMOS EN ETAPA DE IMPLEMENTACIÓN
-        </span>
+        <p class="text-white text-lg lg:text-xl">
+            PLAN DE ACCIÓN DE GOBIERNO ABIERTO <span class="block font-bold">2019 - 2022</span>
+        </p>
     </div>
-    <div class="lg:col-start-9 lg:col-end-13 self-center p-8 lg:px-12 xl:px-16 text-center lg:text-left">
-        <p class="font-medium lg:text-lg xl:text-xl">
+    <div
+        class="lg:col-start-9 lg:col-end-13 p-8 lg:px-12 xl:px-20 text-center lg:text-left py-12 lg:pt-36 lg:pb-12 grid place-items-center">
+        <p class="font-medium lg:text-lg xl:text-xl w-10/12 md:w-8/12 lg:w-full mx-auto text-center lg:text-left">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
             dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
             suscipit lobortis nisl ut aliquip ex ea commodo
         </p>
+    </div>
+    <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
+        <div class="text-center mb-6 md:mb-8 lg:mb-10 xl:mb-12 mx-auto w-10/12">
+            <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 text-grey-dark">
+                Conoce el avance
+            </h2>
+            <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8">Explora la implementación de compromisos que hacen parte del
+                <a class="font-bold text-blue-dark" href="{{ relref . " primer-plan.md" }}">Primer Plan de Acción.</a>
+            </p>
+        </div>
+        {{ partial "how-to.html" . }}
+    </div>
+    <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13">
+        <div class="text-center lg:text-left mx-auto w-10/12 md:w-8/12 lg:w-7/12">
+            <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            </p>
+            <img src="/images/inicio/how-to-app.png" alt="how to use app">
+        </div>
     </div>
     <div class="bg-orange py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-9 grid place-items-center">
         <div>
@@ -36,7 +57,18 @@
         <img class="w-full h-full object-cover object-center" srcset="/images/inicio/descarga-reporte.png"
             alt="Descarga reporte">
     </picture>
-    <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-9 grid place-items-center">
+    <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
+        <div class="text-center w-10/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mx-auto">
+            <img class="h-36 lg:h-48 mx-auto mb-6 lg:mb-10" src="/images/general/logo-gobierno-abierto.png"
+                alt="logo gobierno abierto">
+            <p class="font-bold text-lg lg:text-xl mb-6 lg:mb-10">
+                Esta plataforma hace parte del Portal Nacional de Gobierno Abierto de Ecuador.
+            </p>
+            <a href="#" class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mb-4 lg:mb-6 xl:mb-8">
+                IR A PÁGINA PRINCIPAL</a>
+        </div>
+    </div>
+    <!-- <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-9 grid place-items-center">
         <div class="w-11/12 lg:w-8/12 xl:w-7/12 mx-auto">
             <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 lg:mb-6 xl:mb-8 text-blue">
                 ¿Qué son los indicadores?
@@ -48,8 +80,8 @@
                 in hendrerit in vulputate velit esse molestie consequat
             </p>
         </div>
-    </div>
-    <div class="py-12 lg:py-0 lg:col-start-9 lg:col-end-13 bg-blue grid place-items-center">
+    </div> -->
+    <!-- <div class="py-12 lg:py-0 lg:col-start-9 lg:col-end-13 bg-blue grid place-items-center">
         <div class="text-center w-full">
             <h3 class="block text-2xl xl:text-3xl font-medium mb-8 lg:mb-12 xl:mb-16 text-white">
                 Conoce la
@@ -61,19 +93,8 @@
             <a class="uppercase py-3 px-6" href="/archives/Metodología de selección de indicadores PAGA.pdf"
                 style="background-color: #FBF9F8;" download>Descargar</a>
         </div>
-    </div>
-    <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
-        <div class="text-center mb-6 md:mb-8 lg:mb-10 xl:mb-12 mx-auto w-10/12">
-            <h2 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 text-grey-dark">
-                Conoce el avance
-            </h2>
-            <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8">Explora la implementación de compromisos que hacen parte del
-                <a class="font-bold" href="{{ relref . " primer-plan.md" }}">Primer Plan de Acción.</a>
-            </p>
-        </div>
-        {{ partial "how-to.html" . }}
-    </div>
-    <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-9 grid place-items-center">
+    </div> -->
+    <!-- <div class="py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-9 grid place-items-center">
         <div class="w-11/12 lg:w-8/12 xl:w-7/12 mx-auto">
             <h2
                 class="block normal-case text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 lg:mb-6 xl:mb-8 text-orange-light">
@@ -86,8 +107,8 @@
             <a class="uppercase py-3 px-6 bg-orange-light text-white"
                 href="/excel/2021-10-22 respuestas a formularios.xlsx" download>CONOCER LOS DATOS</a>
         </div>
-    </div>
-    <div class="py-12 lg:py-0 lg:col-start-9 lg:col-end-13 bg-orange-light grid place-items-center">
+    </div> -->
+    <!-- <div class="py-12 lg:py-0 lg:col-start-9 lg:col-end-13 bg-orange-light grid place-items-center">
         <div class="text-center w-full">
             <h3 class="block text-2xl xl:text-3xl font-medium mb-8 lg:mb-12 xl:mb-16 text-white">
                 Conoce las
@@ -98,6 +119,6 @@
             </h3>
             <a class="uppercase py-3 px-6" href="#" style="background-color: #FBF9F8;">Leer Más</a>
         </div>
-    </div>
+    </div> -->
 </div>
 {{ end }}

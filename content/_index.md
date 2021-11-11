@@ -1,5 +1,7 @@
 ---
 title: Inicio
 weight: 1
-menu: main
+menu:
+  main:
+    identifier: inicio
 ---
