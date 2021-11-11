@@ -1,6 +1,6 @@
 <header class="bg-body fixed w-full z-50">
     <div class="flex items-center justify-between 2xl:container mx-auto">
-        <a href="{{ relref . "_index.md" }}">
+        <a href="{{ relref . " _index.md" }}">
             <img class="h-20 lg:h-24" src="/images/general/logo-gobierno-abierto.png" alt="logo gobierno abierto">
         </a>
         <nav class="text-white uppercase font-medium lg:w-10/12">
@@ -37,13 +37,24 @@
                 {{ end }}
                 {{ end }}
                 {{ end }}
-                <a href="{{ relref . "iniciar-sesion.md"}}" class="uppercase py-2 px-4 hover:text-blue-light duration-300" style="background-color: #787D80;">Iniciar Sesión</a>
+                <a href="{{ relref . " iniciar-sesion.md"}}"
+                    class="uppercase py-2 px-4 hover:text-blue-light duration-300"
+                    style="background-color: #787D80;">Iniciar Sesión</a>
             </ul>
             <!-- DESKTOP MENU END -->
-    
+
             <!-- MOBILE MENU -->
             <ul class="nav-mobile">
-                <li class="mb-8"><a href="{{ relref . " _index.md" }}">Inicio</a></li>
+                <li class="mb-8">
+                    <details>
+                        <summary>INICIO</summary>
+                        <ul>
+                            <li class="my-8"><a href="{{ relref . " conoce-el-avance.md" }}">Conoce el avance</a></li>
+                            <li class="mb-8"><a href="{{ relref . " reporte-de-seguimiento" }}">Reporte de
+                                    seguimiento</a></li>
+                        </ul>
+                    </details>
+                </li>
                 <li class="mb-8">
                     <details>
                         <summary>Seguimiento al plan</summary>
@@ -53,11 +64,21 @@
                         </ul>
                     </details>
                 </li>
-                <li class="mb-8"><a href="{{ relref . " como-subir-avances.md" }}">¿Como subir avances?</a></li>
-                <a href="{{ relref . "iniciar-sesion.md"}}" class="uppercase py-2 px-4 hover:text-blue-light duration-300" style="background-color: #787D80;">Iniciar Sesión</a>
+                <li class="mb-8">
+                    <details>
+                        <summary>CONTACTO</summary>
+                        <ul>
+                            <li class="my-8"><a href="{{ relref . " responsables-de-los-compromisos.md" }}">Responsable de los compromisos</a></li>
+                            <li class="mb-8"><a href="#">Participación ciudadana</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <a href="{{ relref . " iniciar-sesion.md"}}"
+                    class="uppercase py-2 px-4 hover:text-blue-light duration-300"
+                    style="background-color: #787D80;">Iniciar Sesión</a>
             </ul>
             <!-- MOBILE MENU END -->
-    
+
             <!-- HAMBURGUER BUTTON -->
             <button class="menu-button">
                 <span class="menu-icon"></span>
