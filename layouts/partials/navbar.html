@@ -18,9 +18,10 @@
                 {{ else }}
                 {{ if .HasChildren }}
                 <li class="menu">
-                    <p>
+                    <p class="flex items-center">
                         {{ .Pre }}
                         <span>{{ .Name }}</span>
+                        <img class="ml-2" src="/images/general/down-arrow.png" alt="drop down">
                     </p>
                     <ul class="submenu">
                         {{ range .Children }}
