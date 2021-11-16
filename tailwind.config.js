@@ -8,6 +8,8 @@ module.exports = {
         'nav-mobile--active',
         'button-download',
         'button-download--link',
+        'overlay--active',
+        'btn-up--active',
       ]
     }
   },
