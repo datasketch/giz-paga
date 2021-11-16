@@ -58,7 +58,7 @@
     transform: rotate(135deg) !important;
   }
   .nav-mobile {
-    @apply block absolute top-0 -left-full z-50 w-full px-8 py-20 bg-body lg:hidden duration-300;
+    @apply block absolute top-0 -left-full z-50 w-full px-8 pt-20 py-10 bg-body lg:hidden duration-300;
   }
   .nav-mobile--active {
     @apply left-0;
@@ -68,6 +68,18 @@
   }
   .button-download--link {
     @apply absolute w-full -bottom-16 left-0 py-2;
+  }
+  .overlay {
+    @apply fixed top-0 left-0 h-screen w-full opacity-100 invisible duration-300;
+  }
+  .overlay--active {
+    @apply bg-black opacity-60 visible cursor-pointer z-30;
+  }
+  .btn-up {
+    @apply fixed bottom-6 -right-full w-12 h-12 bg-body text-white cursor-pointer duration-200 grid place-items-center text-xl rounded;
+  }
+  .btn-up--active {
+    @apply right-6;
   }
 }
 
