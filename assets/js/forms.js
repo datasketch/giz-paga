@@ -7,7 +7,7 @@ async function save(data, slug) {
   const response = await fetch(url, {
     method: 'post',
     headers: {
-      'xc-auth': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhdmlkQGRhdGFza2V0Y2guY28iLCJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNjM2NjY2MTI2fQ.4gkh6aNybTZITaFJS2tdDZm7--wveS1LzWcxCeAivXg',
+      'xc-auth': 'AUTH_TOKEN',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(body),
