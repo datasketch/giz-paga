@@ -3,7 +3,7 @@
 
 <head>
     {{ partial "head.html" . }}
-    {{ block "head" . }}{{ end }}
+    {{ block "meta" . }}{{ end }}
     <title>{{ .Title }}</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="overlay"></div>
     <div class="btn-up">&uparrow;</div>
     {{ block "js" . }}{{ end }}
-    {{ $default := resources.Get "js/default.js" | js.Build (dict "minify" true) }}
+    {{ $default := resources.Get "js/default.js" | js.Build (dict "minify" hugo.IsProduction) }}
     <script src="{{ $default.Permalink }}"></script>
 </body>
 
