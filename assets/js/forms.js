@@ -3,14 +3,13 @@ import { normalizeCoreGroup, normalizeCounterparts, normalizeEntities } from './
 
 async function save(data, slug) {
   const url = `https://giz.datasketch.co/nc/paga_u6ms/api/v1/${slug}`;
-  const body = Array.isArray(data) ? data : [data];
   const response = await fetch(url, {
     method: 'post',
     headers: {
-      'xc-auth': 'AUTH_TOKEN',
+      'xc-auth': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhdmlkQGRhdGFza2V0Y2guY28iLCJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNjM2NjY2MTI2fQ.4gkh6aNybTZITaFJS2tdDZm7--wveS1LzWcxCeAivXg',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body),
+    body: JSON.stringify(data),
   });
   return response;
 }
@@ -48,13 +47,10 @@ function getNormalizedData(submission, type) {
   try {
     const form = await Formio.createForm(document.getElementById('form'), formUrl);
     form.on('submit', async (submission) => {
-      console.log(submission.data);
-      console.log('---');
       const data = getNormalizedData(submission.data, formType);
-      console.log(data);
-      // save(data, formSlug).then(() => {
-      //   form.resetValue();
-      // }).catch(console.error);
+      save(data, formSlug).then(() => {
+        form.resetValue();
+      }).catch(console.error);
     });
   } catch (error) {
     console.error(error);
