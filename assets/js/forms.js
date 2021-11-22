@@ -49,7 +49,7 @@ function getNormalizedData(submission, type) {
     form.on('submit', async (submission) => {
       const data = getNormalizedData(submission.data, formType);
       save(data, formSlug).then(() => {
-        form.resetValue();
+        document.location.reload();
       }).catch((err) => {
         // eslint-disable-next-line no-alert
         alert('Se ha presentado un error');

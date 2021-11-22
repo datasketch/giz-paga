@@ -86,8 +86,9 @@ function normalizeSubmission(keyMap) {
     .reduce((result, key) => {
       const keyName = reserseKeyMap[key];
       if (!keyName) return result;
+      const value = data[key];
       // eslint-disable-next-line no-param-reassign
-      result[keyName] = data[key];
+      result[keyName] = Array.isArray(value) ? value.join('|') : value;
       return result;
     }, {});
 }
