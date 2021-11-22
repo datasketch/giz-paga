@@ -50,9 +50,17 @@ function getNormalizedData(submission, type) {
       const data = getNormalizedData(submission.data, formType);
       save(data, formSlug).then(() => {
         form.resetValue();
-      }).catch(console.error);
+      }).catch((err) => {
+        // eslint-disable-next-line no-alert
+        alert('Se ha presentado un error');
+        // eslint-disable-next-line no-console
+        console.error(err);
+      });
     });
   } catch (error) {
+    // eslint-disable-next-line no-alert
+    alert('Se ha presentado un error');
+    // eslint-disable-next-line no-console
     console.error(error);
   }
 })();
