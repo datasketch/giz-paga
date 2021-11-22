@@ -32,24 +32,25 @@ const entities = {
 };
 
 const counterparts = {
-  '[Datos generales] Nombre de la persona que llena el formulario': 'datosGeneralesNombreDeLaPersonaQueLlenaElFormulario',
-  '[Datos generales] nombre de la organización de sociedad civil que registra el avance': 'datosGeneralesNombreDeLaOrganizacionDeSociedadCivilQueRegistraElAvance',
-  '[Datos generales] nombre del compromiso': 'datosGeneralesNombreDelCompromiso',
-  'Nombre hito del compromiso 1': 'nombreHitoDelCompromiso1',
-  'nombre hito del compromiso 2': 'nombreHitoDelCompromiso2',
-  'nombre hito del compromiso 3': 'nombreHitoDelCompromiso3',
-  'nombre hito del compromiso 4': 'nombreHitoCompromiso4',
-  'nombre hito del compromiso 5': 'nombreHitoCompromiso5',
-  'nombre hito del compromiso 6': 'nombreHitoDelCompromiso6',
-  'nombre hito del compromiso 7': 'nombreHitoDelCompromiso7',
-  'nombre hito del compromiso 8': 'nombreHitoDelCompromiso8',
-  'nombre hito del compromiso 9': 'nombreHitoDelCompromiso9',
-  'nombre hito del compromiso 10': 'nombreHitoDelCompromiso10',
-  '[Datos generales] fecha de registro del formulario': 'datosGeneralesFechaDeRegistroDelFormulario',
-  '[Indicador 2] Seleccione el estado de cumplimiento del hito': 'indicador2CualEsElEstadoDeCumplimientoDelHito',
-  '[Indicador 3] De acuerdo al avance actual del hito, responda si la entidad responsable ha respondido con sus responsabilidades con la contraparte durante el compromiso': 'indicador3DeAcuerdoAlAvanceActualDelHitoLaEntidadResponsableHaRespondidoConSusResponsabilidadesConLaContraparteDuranteElCompromiso',
-  '[Indicador 3] (Justificación) De acuerdo al avance actual del hito, responda si la entidad responsable ha respondido con sus responsabilidades con la contraparte durante el compromiso': 'indicador3DeAcuerdoAlAvanceActualDelHitoLaEntidadResponsableHaRespondidoConSusResponsabilidadesConLaContraparteDuranteElCompromisoJustificacion',
-  '[Indicador 7] De acuerdo al avance actual del hito, seleccione si se ha percibido un cambio en la realidad previa respecto a la realidad una vez implementado el hito del compromiso': 'indicador7DeAcuerdoAlAvanceActualDelHitoSeHaPercibidoUnCambioEnLaRealidadPreviaRespectoALaRealidadUnaVezImplementadoElHitoDelCompromiso',
+  Funcionario: 'datosGeneralesNombreDeLaPersonaQueLlenaElFormulario',
+  // eslint-disable-next-line quote-props
+  'Organización': 'datosGeneralesNombreDeLaOrganizacionDeSociedadCivilQueRegistraElAvance',
+  Compromiso: 'datosGeneralesNombreDelCompromiso',
+  'Hito primer compromiso': 'nombreHitoDelCompromiso1',
+  'Hito segundo compromiso': 'nombreHitoDelCompromiso2',
+  'Hito tercer compromiso': 'nombreHitoDelCompromiso3',
+  'Hito cuarto compromiso': 'nombreHitoCompromiso4',
+  'Hito quinto compromiso': 'nombreHitoCompromiso5',
+  'Hito sexto compromiso': 'nombreHitoDelCompromiso6',
+  'Hito séptimo compromiso': 'nombreHitoDelCompromiso7',
+  'Hito octavo compromiso': 'nombreHitoDelCompromiso8',
+  'Hito noveno compromiso': 'nombreHitoDelCompromiso9',
+  'Hito décimo compromiso': 'nombreHitoDelCompromiso10',
+  'Fecha de registro': 'datosGeneralesFechaDeRegistroDelFormulario',
+  'Indicador 2': 'indicador2CualEsElEstadoDeCumplimientoDelHito',
+  'Indicador 3': 'indicador3DeAcuerdoAlAvanceActualDelHitoLaEntidadResponsableHaRespondidoConSusResponsabilidadesConLaContraparteDuranteElCompromiso',
+  'Indicador 3 - justificación': 'indicador3DeAcuerdoAlAvanceActualDelHitoLaEntidadResponsableHaRespondidoConSusResponsabilidadesConLaContraparteDuranteElCompromisoJustificacion',
+  'Indicador 7': 'indicador7DeAcuerdoAlAvanceActualDelHitoSeHaPercibidoUnCambioEnLaRealidadPreviaRespectoALaRealidadUnaVezImplementadoElHitoDelCompromiso',
 };
 
 const coreGroup = {
