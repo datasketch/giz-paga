@@ -1,4 +1,3 @@
-import { Formio } from 'formiojs';
 import { normalizeCoreGroup, normalizeCounterparts, normalizeEntities } from './utils/normalize';
 
 async function save(data, slug) {
@@ -45,7 +44,7 @@ function getNormalizedData(submission, type) {
   formSlugInput.remove();
 
   try {
-    const form = await Formio.createForm(document.getElementById('form'), formUrl);
+    const form = await window.Formio.createForm(document.getElementById('form'), formUrl);
     form.on('submit', async (submission) => {
       const data = getNormalizedData(submission.data, formType);
       save(data, formSlug).then(() => {

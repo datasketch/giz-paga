@@ -15,6 +15,7 @@
 {{ end }}
 
 {{ define "js" }}
+    <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
     {{ $forms := resources.Get "js/forms.js" | js.Build (dict "minify" hugo.IsProduction )}}
     <script src="{{ $forms.Permalink }}"></script>
 {{ end }}

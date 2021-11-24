@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@tailwindcss/aspect-ratio": "^0.3.0",
-    "formiojs": "^4.13.10"
+    "@tailwindcss/aspect-ratio": "^0.3.0"
   }
 }
