@@ -10,10 +10,9 @@
 </div>
 {{ end }}
 
-{{/*  {{ define "meta" }}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{{ define "meta" }}
 <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
-{{ end }}  */}}
+{{ end }}
 
 {{ define "js" }}
     {{ $forms := resources.Get "js/forms.js" | js.Build (dict "minify" hugo.IsProduction )}}
