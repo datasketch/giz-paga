@@ -1,6 +1,6 @@
 ---
 title: Contacto
-weight: 3
+weight: 4
 menu:
   main:
     identifier: contacto
