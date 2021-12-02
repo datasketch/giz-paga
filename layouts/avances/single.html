@@ -3,8 +3,8 @@
     <input type="hidden" id="form-url" value="{{ .Params.form_url }}">
     <input type="hidden" id="form-type" value="{{ .Params.form_type }}">
     <input type="hidden" id="form-slug" value="{{ .Params.form_slug }}">
-    <input type="hidden" id="api-host" name='{{ getenv "API_HOST" }}'>
-    <input type="hidden" id="api-token" name='{{ getenv "API_TOKEN" }}'>
+    <input type="hidden" id="api-host" value='{{ getenv "API_HOST" }}'>
+    <input type="hidden" id="api-token" value='{{ getenv "API_TOKEN" }}'>
     <div class="w-full px-4 py-24 md:w-8/12 md:mx-auto">
         <h1 class="block text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 text-grey-dark">{{ .Title }}</h1>
         <div id="form"></div>
