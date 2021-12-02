@@ -1,11 +1,20 @@
 import { normalizeCoreGroup, normalizeCounterparts, normalizeEntities } from './utils/normalize';
 
+const apiTokenInput = document.getElementById('api-token');
+const apiHostInput = document.getElementById('api-host');
+
+const apiToken = apiTokenInput.value;
+const apiHost = apiHostInput.value.endsWith('/') ? apiHostInput.value.slice(0, -1) : apiHostInput.value;
+
+apiTokenInput.remove();
+apiHostInput.remove();
+
 async function save(data, slug) {
-  const url = `https://giz.datasketch.co/nc/paga_u6ms/api/v1/${slug}`;
+  const url = `${apiHost}/${slug}`;
   const response = await fetch(url, {
     method: 'post',
     headers: {
-      'xc-auth': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhdmlkQGRhdGFza2V0Y2guY28iLCJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNjM2NjY2MTI2fQ.4gkh6aNybTZITaFJS2tdDZm7--wveS1LzWcxCeAivXg',
+      'xc-auth': apiToken,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
@@ -32,6 +41,12 @@ function getNormalizedData(submission, type) {
 }
 
 (async () => {
+  if (!apiToken && !apiHost) {
+    // eslint-disable-next-line no-alert
+    alert('Se ha producido un error. Contacte al administrador del sitio web');
+    return;
+  }
+
   const formUrlInput = document.getElementById('form-url');
   const formTypeInput = document.getElementById('form-type');
   const formSlugInput = document.getElementById('form-slug');
