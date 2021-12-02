@@ -17,7 +17,17 @@ services:
       interval: 10s
       timeout: 2s
       retries: 10
-
+  seed:
+    build: .
+    depends_on:
+      psql:
+        condition: service_healthy
+    environment:
+      - POSTGRES_PASSWORD
+      - POSTGRES_USER
+      - POSTGRES_DB=avances
+    ports:
+      - "2345:5432"
   nocodb:
     image: nocodb/nocodb
     depends_on:

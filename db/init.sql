@@ -1,22 +1,11 @@
--- -------------------------------------------------------------
--- TablePlus 4.5.0(396)
---
--- https://tableplus.com/
---
--- Database: giz
--- Generation Time: 2021-12-01 12:14:48.4670
--- -------------------------------------------------------------
-
-
-DROP TABLE IF EXISTS "public"."nc_u6ms__contrapartes";
--- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+DROP TABLE IF EXISTS "public"."contrapartes";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS nc_u6ms__contrapartes_id_seq;
+CREATE SEQUENCE IF NOT EXISTS contrapartes_id_seq;
 
 -- Table Definition
-CREATE TABLE "public"."nc_u6ms__contrapartes" (
-    "id" int4 NOT NULL DEFAULT nextval('nc_u6ms__contrapartes_id_seq'::regclass),
+CREATE TABLE "public"."contrapartes" (
+    "id" int4 NOT NULL DEFAULT nextval('contrapartes_id_seq'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Funcionario" varchar,
@@ -40,15 +29,14 @@ CREATE TABLE "public"."nc_u6ms__contrapartes" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."nc_u6ms__contrapartes-diccionario";
--- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+DROP TABLE IF EXISTS "public"."contrapartes-diccionario";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "nc_u6ms__contrapartes-diccionario_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "contrapartes-diccionario_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."nc_u6ms__contrapartes-diccionario" (
-    "id" int4 NOT NULL DEFAULT nextval('"nc_u6ms__contrapartes-diccionario_id_seq"'::regclass),
+CREATE TABLE "public"."contrapartes-diccionario" (
+    "id" int4 NOT NULL DEFAULT nextval('"contrapartes-diccionario_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Atributo" varchar,
@@ -56,15 +44,14 @@ CREATE TABLE "public"."nc_u6ms__contrapartes-diccionario" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."nc_u6ms__entidades";
--- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+DROP TABLE IF EXISTS "public"."entidades";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS nc_u6ms__entidades_id_seq;
+CREATE SEQUENCE IF NOT EXISTS entidades_id_seq;
 
 -- Table Definition
-CREATE TABLE "public"."nc_u6ms__entidades" (
-    "id" int4 NOT NULL DEFAULT nextval('nc_u6ms__entidades_id_seq'::regclass),
+CREATE TABLE "public"."entidades" (
+    "id" int4 NOT NULL DEFAULT nextval('entidades_id_seq'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Funcionario" varchar,
@@ -100,15 +87,14 @@ CREATE TABLE "public"."nc_u6ms__entidades" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."nc_u6ms__entidades-diccionario";
--- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+DROP TABLE IF EXISTS "public"."entidades-diccionario";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "nc_u6ms__entidades-diccionario_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "entidades-diccionario_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."nc_u6ms__entidades-diccionario" (
-    "id" int4 NOT NULL DEFAULT nextval('"nc_u6ms__entidades-diccionario_id_seq"'::regclass),
+CREATE TABLE "public"."entidades-diccionario" (
+    "id" int4 NOT NULL DEFAULT nextval('"entidades-diccionario_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Atributo" varchar,
@@ -116,15 +102,14 @@ CREATE TABLE "public"."nc_u6ms__entidades-diccionario" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."nc_u6ms__grupo-nucleo";
--- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+DROP TABLE IF EXISTS "public"."grupo-nucleo";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "nc_u6ms__grupo-nucleo_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "grupo-nucleo_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."nc_u6ms__grupo-nucleo" (
-    "id" int4 NOT NULL DEFAULT nextval('"nc_u6ms__grupo-nucleo_id_seq"'::regclass),
+CREATE TABLE "public"."grupo-nucleo" (
+    "id" int4 NOT NULL DEFAULT nextval('"grupo-nucleo_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Compromiso" varchar,
@@ -149,15 +134,14 @@ CREATE TABLE "public"."nc_u6ms__grupo-nucleo" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."nc_u6ms__grupo-nucleo-diccionario";
--- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+DROP TABLE IF EXISTS "public"."grupo-nucleo-diccionario";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "nc_u6ms__grupo-nucleo-diccionario_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "grupo-nucleo-diccionario_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."nc_u6ms__grupo-nucleo-diccionario" (
-    "id" int4 NOT NULL DEFAULT nextval('"nc_u6ms__grupo-nucleo-diccionario_id_seq"'::regclass),
+CREATE TABLE "public"."grupo-nucleo-diccionario" (
+    "id" int4 NOT NULL DEFAULT nextval('"grupo-nucleo-diccionario_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Atributo" varchar,
@@ -165,10 +149,10 @@ CREATE TABLE "public"."nc_u6ms__grupo-nucleo-diccionario" (
     PRIMARY KEY ("id")
 );
 
-INSERT INTO "public"."nc_u6ms__contrapartes" ("id", "created_at", "updated_at", "Funcionario", "Organización", "Compromiso", "Hito primer compromiso", "Hito segundo compromiso", "Hito tercer compromiso", "Hito cuarto compromiso", "Hito quinto compromiso", "Hito sexto compromiso", "Hito séptimo compromiso", "Hito octavo compromiso", "Hito noveno compromiso", "Hito décimo compromiso", "Fecha de registro", "Indicador 2", "Indicador 3 - entidad", "Indicador 3 - justificación", "Indicador 7") VALUES
+INSERT INTO "public"."contrapartes" ("id", "created_at", "updated_at", "Funcionario", "Organización", "Compromiso", "Hito primer compromiso", "Hito segundo compromiso", "Hito tercer compromiso", "Hito cuarto compromiso", "Hito quinto compromiso", "Hito sexto compromiso", "Hito séptimo compromiso", "Hito octavo compromiso", "Hito noveno compromiso", "Hito décimo compromiso", "Fecha de registro", "Indicador 2", "Indicador 3 - entidad", "Indicador 3 - justificación", "Indicador 7") VALUES
 (1, '2021-11-30 17:25:49.848227', '2021-11-30 17:25:49.848227', 'Andrés Bermúdez', 'Fundación Diálogo Diverso', 'Re-diseño y actualización del portal de datos abiertos', NULL, 'Hito 4: Sistematización de recomendaciones y ajuste del portal de datos abiertos.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-11-30T17:00:00.000Z', 'Ejecución', 'Sí', 'La entidad responsable cumplió los acuerdos establecidos con la contraparte', NULL);
 
-INSERT INTO "public"."nc_u6ms__contrapartes-diccionario" ("id", "created_at", "updated_at", "Atributo", "Descripción") VALUES
+INSERT INTO "public"."contrapartes-diccionario" ("id", "created_at", "updated_at", "Atributo", "Descripción") VALUES
 (1, '2021-11-22 22:58:47.151785', '2021-11-22 23:01:47.743184', 'Funcionario', 'Nombre de la persona que llena el formulario'),
 (2, '2021-11-22 22:58:47.280791', '2021-11-22 23:02:03.365467', 'Organización', 'Nombre de la organización de sociedad civil que registra el avance'),
 (3, '2021-11-22 22:58:47.391136', '2021-11-22 23:02:22.35194', 'Compromiso', 'Nombre del compromiso'),
@@ -188,10 +172,10 @@ INSERT INTO "public"."nc_u6ms__contrapartes-diccionario" ("id", "created_at", "u
 (17, '2021-11-22 23:01:20.987813', '2021-11-22 23:04:18.691545', 'Indicador 3 - justificación', 'Justificación indicador 3'),
 (18, '2021-11-22 23:01:30.274596', '2021-11-22 23:05:09.007806', 'Indicador 7', 'Se ha percibido un cambio en la realidad previa respecto a la realidad una vez implementado el hito del compromiso');
 
-INSERT INTO "public"."nc_u6ms__entidades" ("id", "created_at", "updated_at", "Funcionario", "Compromiso", "Hito primer compromiso", "Hito segundo compromiso", "Hito tercer compromiso", "Hito cuarto compromiso", "Hito quinto compromiso", "Hito sexto compromiso", "Hito séptimo compromiso", "Hito octavo compromiso", "Hito noveno compromiso", "Hito décimo compromiso", "Fecha de registro", "Descripción", "Indicador 1", "Indicador 2", "Indicador 3 - contraparte", "Indicador 3 - justificación", "Indicador 4", "Indicador 4 - justificación", "Indicador 5", "Indicador 6", "Indicador 6 - nuevo", "Indicador 7 - realidad inicial", "Indicador 7 - realidad posterior", "Indicador 8", "Indicador 8 - iniciativas", "Indicador 8 - nuevo", "Indicador 8 - especificación", "Indicador 8 - justificación") VALUES
+INSERT INTO "public"."entidades" ("id", "created_at", "updated_at", "Funcionario", "Compromiso", "Hito primer compromiso", "Hito segundo compromiso", "Hito tercer compromiso", "Hito cuarto compromiso", "Hito quinto compromiso", "Hito sexto compromiso", "Hito séptimo compromiso", "Hito octavo compromiso", "Hito noveno compromiso", "Hito décimo compromiso", "Fecha de registro", "Descripción", "Indicador 1", "Indicador 2", "Indicador 3 - contraparte", "Indicador 3 - justificación", "Indicador 4", "Indicador 4 - justificación", "Indicador 5", "Indicador 6", "Indicador 6 - nuevo", "Indicador 7 - realidad inicial", "Indicador 7 - realidad posterior", "Indicador 8", "Indicador 8 - iniciativas", "Indicador 8 - nuevo", "Indicador 8 - especificación", "Indicador 8 - justificación") VALUES
 (7, '2021-11-30 15:35:04.542094', '2021-11-30 15:35:04.542094', 'Andrés Bermúdez', 'Primer laboratorio de innovación ciudadana de Ecuador', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Hito 3: Diseño del modelo de gestión del laboratorio, que incluya procesos y metodologías de innovación.', NULL, NULL, '2021-10-06T17:00:00.000Z', 'Se han realizado una serie de actividades de integración de entidades públicas', 30, 'Ejecución', 'Sí', NULL, 7, '2 foros, 3 capacitaciones', 50, 'Entidad pública|Ciudadanía general', NULL, 'No se encontraba un laboratorio de innovación en el gobierno de Ecuador', 'Ya se encuentra establecido un diseño de gestión para el laboratorio de innovación', 'Sí', 'Objetivos de Desarrollo Sostenible', NULL, 'Objetivo 5', 'Contar con la política y guía de datos abiertos permite fortalecer la gestión institucional en transparencia, participación y colaboración ciudadana');
 
-INSERT INTO "public"."nc_u6ms__entidades-diccionario" ("id", "created_at", "updated_at", "Atributo", "Descripción") VALUES
+INSERT INTO "public"."entidades-diccionario" ("id", "created_at", "updated_at", "Atributo", "Descripción") VALUES
 (1, '2021-11-22 19:14:49.357217', '2021-11-22 19:50:06.58581', 'Funcionario', 'Nombre de la persona que llena el formulario'),
 (2, '2021-11-22 19:14:58.709229', '2021-11-22 19:50:17.728943', 'Compromiso', 'Nombre del compromiso'),
 (3, '2021-11-22 19:14:58.827226', '2021-11-22 19:50:33.162458', 'Hito primer compromiso', 'Nombre hito del compromiso 1'),
@@ -223,7 +207,7 @@ INSERT INTO "public"."nc_u6ms__entidades-diccionario" ("id", "created_at", "upda
 (29, '2021-11-22 19:48:01.658044', '2021-11-22 19:57:26.965236', 'Indicador 8 - especificación', 'Punto en concreto de la iniciativa internacional se relaciona el hito'),
 (30, '2021-11-22 19:48:12.242913', '2021-11-22 19:57:42.340524', 'Indicador 8 - justificación', 'Justificación Indicador 8 - especificación');
 
-INSERT INTO "public"."nc_u6ms__grupo-nucleo-diccionario" ("id", "created_at", "updated_at", "Atributo", "Descripción") VALUES
+INSERT INTO "public"."grupo-nucleo-diccionario" ("id", "created_at", "updated_at", "Atributo", "Descripción") VALUES
 (1, '2021-11-23 00:05:06.246477', '2021-11-23 00:09:32.327', 'Compromiso', 'Nombre del compromiso'),
 (2, '2021-11-23 00:05:13.89173', '2021-11-23 00:09:48.730474', 'Hito primer compromiso', 'Nombre hito del compromiso 1'),
 (3, '2021-11-23 00:05:18.24623', '2021-11-23 00:09:58.68242', 'Hito segundo compromiso', 'Nombre hito del compromiso 2'),
