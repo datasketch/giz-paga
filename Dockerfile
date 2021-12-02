@@ -1,34 +1,20 @@
-FROM golang:1.16-alpine AS setup
+FROM ubuntu:20.04 AS build
 
-ARG HUGO_BUILD_TAGS=extended
-ARG CGO=1
-ENV CGO_ENABLED=${CGO}
-ENV GOOS=linux
-ENV GO111MODULE=on
+RUN apt-get update && \
+    apt-get install -y wget curl && \
+    rm -rf /var/lib/apt/lists/*
 
-# gcc/g++ are required to build SASS libraries for extended version
-RUN apk update && \
-    apk add --no-cache gcc g++ musl-dev git && \
-    go get github.com/magefile/mage
+# Install Node
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs
 
-WORKDIR /go/src/github.com/gohugoio/hugo
-
-RUN git clone --depth=1 https://github.com/gohugoio/hugo.git .
-
-RUN mage hugo && mage install
-
-FROM node:12-alpine AS build
-
-COPY --from=setup /go/bin/hugo /usr/bin/hugo
-
-# libc6-compat & libstdc++ are required for extended SASS libraries
-# ca-certificates are required to fetch outside resources (like Twitter oEmbeds)
-RUN apk update && \
-    apk add --no-cache ca-certificates libc6-compat libstdc++ git
+# Install Hugo
+RUN wget https://github.com/gohugoio/hugo/releases/download/v0.89.4/hugo_extended_0.89.4_Linux-64bit.tar.gz && \
+    tar -xvzf hugo_extended_0.89.4_Linux-64bit.tar.gz -C /usr/local/bin/ hugo
 
 WORKDIR /site
 
-COPY package*.json ./*
+COPY package*.json ./
 
 RUN npm install
 
