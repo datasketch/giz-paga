@@ -3,3 +3,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{ $styles := resources.Get "styles/tailwind.pcss" | toCSS | postCSS | minify }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}">
+{{ if .Title }}
+<title>{{ .Title }} | {{ .Site.Title }}</title>
+{{ else }}
+<title>{{ .Site.Title }}</title>
+{{ end }}
