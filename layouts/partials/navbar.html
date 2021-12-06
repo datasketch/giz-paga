@@ -26,7 +26,11 @@
                     <ul class="submenu">
                         {{ range .Children }}
                         <li>
-                            <a class="hover:text-blue-light duration-300" href="{{ .URL }}">{{ .Name }}</a>
+                            {{ $href := .URL }}
+                            {{ with .Page }}
+                                {{ $href = or .Params.external_url $href }}
+                            {{ end }}
+                            <a class="hover:text-blue-light duration-300" href="{{$href}}">{{ .Name }}</a>
                         </li>
                         {{ end }}
                     </ul>
