@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "evidencias-modal.html" . }}
 <div class="grid grid-cols-1 lg:grid-cols-12">
     <div
         class="bg-blue-dark py-16 lg:py-28 lg:px-24 xl:px-28 text-center lg:text-left lg:col-start-1 lg:col-end-9 observer">
@@ -71,7 +72,7 @@
             </p>
             <a class="inline-block uppercase py-3 px-6 bg-blue-dark text-white mb-6 lg:mb-8 xl:mb-10" href='{{ "datos.csv" | absURL }}' download="avances.csv" target="_blank">Descargar datos</a>
             <p class="font-bold lg:text-lg xl:text-xl mb-4 lg:mb-6">Conoce la evidencias de cada compromiso</p>
-            <a href="#" class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer">CONOCER MÁS</a>
+            <button class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer" data-modal="evidencias">CONOCER MÁS</button>
         </div>
     </div>
     <div class="py-16 lg:py-20 xl:py-24 lg:col-start-9 lg:col-end-13 bg-blue-dark grid place-items-center">
@@ -118,9 +119,47 @@
 <script>
     const buttonDownload = document.querySelector('.button-download');
     const buttonDownloadLink = document.querySelector('.button-download--link');
+    const modalTrigger = document.querySelector('[data-modal="evidencias"]')
+    const modalContainer = document.getElementById('evidencias')
+    const modalDismiss = modalContainer.querySelector('[data-dismiss]')
 
     buttonDownload.addEventListener('click', function (e) {
         buttonDownloadLink.classList.toggle('hidden');
     })
+
+    modalTrigger.addEventListener('click', () => {
+        modalContainer.classList.remove('hidden')
+        fadeIn(modalContainer)
+        window.addEventListener('keyup', escapeHandler)
+    })
+
+    modalContainer.addEventListener('click', function (event) {
+        if (event.target === this) modalContainer.classList.add('hidden')
+    })
+
+    modalDismiss.addEventListener('click', function (event) {
+        modalContainer.classList.add('hidden')
+    })
+
+    const fadeIn = (el) => {
+        el.style.opacity = 0;
+
+        const tick = () => {
+            el.style.opacity = +el.style.opacity + 0.1;
+            if (+el.style.opacity < 1) {
+                if (window.requestAnimationFrame) requestAnimationFrame(tick);
+                else setTimeout(tick, 16);
+            }
+        };
+
+        tick();
+    };
+
+    const escapeHandler = function (event) {
+        if (event.key === 'Escape' || event.keyCode === 27) {
+            modalContainer.classList.add('hidden')
+            window.removeEventListener('keyup', escapeHandler)
+        }
+    }
 </script>
 {{ end }}
