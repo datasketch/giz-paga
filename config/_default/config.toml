@@ -2,3 +2,14 @@ baseURL = '/'
 defaultContentLanguage = "es"
 languageCode = 'es'
 title = 'PAGA'
+[security]
+enableInlineShortcodes = false
+[security.exec]
+allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+
+[security.funcs]
+getenv = ['^HUGO_', 'API_HOST', 'API_TOKEN']
+[security.http]
+methods = ['(?i)GET|POST']
+urls = ['.*']
