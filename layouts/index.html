@@ -18,17 +18,28 @@
     <div
         class="lg:col-start-9 lg:col-end-13 p-8 lg:px-12 xl:px-20 text-center lg:text-left py-12 grid place-items-center">
         <p class="font-medium lg:text-lg xl:text-xl w-10/12 md:w-8/12 lg:w-full mx-auto text-center lg:text-left">
-            Esta plataforma presenta los indicadores de seguimiento, monitoreo y evaluación del Plan de Acción del Gobierno Abierto de Ecuador, para conocer los avances de los compromisos presentados por sus entidades responsables y contrapartes.
+            Esta plataforma presenta los indicadores de seguimiento, monitoreo y evaluación del Plan de Acción del
+            Gobierno Abierto de Ecuador, para conocer los avances de los compromisos presentados por sus entidades
+            responsables y contrapartes.
         </p>
     </div>
     <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
         <div class="text-center mb-6 md:mb-8 lg:mb-10 xl:mb-12 mx-auto w-10/12">
-            <h2 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">
-                Estado de cumplimiento del Plan
+            <h2 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-8 text-grey-dark">
+                Estado de avance del Plan
             </h2>
-            <iframe class="w-full h-40" src="/graficas/porcentaje_cumplimiento.html" frameborder="0"></iframe>
-            <h3 class="mt-24 text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">Estado de cumplimiento de los compromisos</h3>
-            <iframe class="w-full h-96 mb-4 lg:mb-6 xl:mb-8" src="/graficas/compromisos_cumplimiento.html" frameborder="0"></iframe>
+            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:text-left mb-4 lg:mb-6">
+                <p class="italic lg:w-6/12 mb-2 lg:mb-0 text-left">Fecha de actualización: Octubre 22 de 2021</p>
+                <p class="lg:w-5/12">
+                    El estado de cumplimiento del plan se calcula de acuerdo al reporte de avance de los hitos de los
+                    compromisos. Si no se ha reportado información, el avance del hito es 0%.
+                </p>
+            </div>
+            <iframe class="w-full h-40 -mt-4" src="/graficas/porcentaje_cumplimiento.html" frameborder="0"></iframe>
+            <h3 class="mt-24 text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">Estado de
+                avance de los compromisos</h3>
+            <iframe class="w-full h-96 mb-4 lg:mb-6 xl:mb-8" src="/graficas/compromisos_cumplimiento.html"
+                frameborder="0"></iframe>
             <h3 class="mt-24 text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">
                 Conoce el avance
             </h3>
@@ -52,7 +63,8 @@
             <h2 class="block normal-case text-white text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 xl:mb-12">
                 Descarga el reporte de <br> seguimiento trimestral
             </h2>
-            <a class="uppercase py-3 px-6 " href='{{ "archivos/reporte_trimestral.pdf" | absURL }}' target="_blank" style="background-color: #FBF9F8;" download="Reporte trimestral">Reporte Trimestral</a>
+            <a class="uppercase py-3 px-6 " href='{{ "archivos/reporte_trimestral.pdf" | absURL }}' target="_blank"
+                style="background-color: #FBF9F8;" download="Reporte trimestral">Reporte Trimestral</a>
         </div>
     </div>
     <picture class="lg:col-start-9 lg:col-end-13">
@@ -68,7 +80,8 @@
                 Esta plataforma es parte del Portal Nacional de Gobierno Abierto Ecuador
             </p>
             <a href="https://www.gobiernoabierto.ec/"
-                class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mb-4 lg:mb-6 xl:mb-8" target="_blank">
+                class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mb-4 lg:mb-6 xl:mb-8"
+                target="_blank">
                 IR A PÁGINA PRINCIPAL</a>
         </div>
     </div>
