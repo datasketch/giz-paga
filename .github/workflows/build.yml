@@ -1,0 +1,24 @@
+name: Build site
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install deps
+        run: npm install
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          extended: true
+          hugo-version: '0.88.1'
+      - name: Build
+        run: hugo --minify --cleanDestinationDir
