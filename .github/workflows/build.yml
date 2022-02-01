@@ -22,4 +22,3 @@ jobs:
           hugo-version: '0.88.1'
       - name: Build
         run: hugo --minify --cleanDestinationDir
-        working-directory: /home/ubuntu/build
