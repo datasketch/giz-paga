@@ -1,3 +1,3 @@
 FROM postgres:12
 
-COPY ./db/init.sql /docker-entrypoint-initdb.d/
+COPY ./db/setup.sql /docker-entrypoint-initdb.d/

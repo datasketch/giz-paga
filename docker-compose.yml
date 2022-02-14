@@ -1,46 +1,32 @@
 version: '3'
-
 services:
-  psql:
-    image: postgres:12
-    restart: always
-    ports:
-      - "5432:5432"
-    volumes:
-      - db_data:/var/lib/postgresql/data
-      - nc_data:/usr/app/data
+  db:
+    build: .
     environment:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
       - POSTGRES_DB
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - nc_data:/usr/app/data
+      - ./db:/usr/app/backup
+    ports:
+      - "5432:5432"
     healthcheck:
       test: pg_isready -U "$POSTGRES_USER" -d "$POSTGRES_DB"
       interval: 10s
       timeout: 2s
       retries: 10
-  seed:
-    build: .
-    depends_on:
-      psql:
-        condition: service_healthy
-    environment:
-      - POSTGRES_PASSWORD
-      - POSTGRES_USER
-      - POSTGRES_DB=avances
-    ports:
-      - "2345:5432"
   nocodb:
-    image: nocodb/nocodb
-    depends_on:
-      psql:
-        condition: service_healthy
-    restart: always
-    ports:
-      - "8080:8080"
-    environment:
-      NC_DB: "pg://psql:5432?user=$POSTGRES_USER&p=$POSTGRES_PASSWORD&d=$POSTGRES_DB"
-
-
+      image: nocodb/nocodb
+      restart: always
+      depends_on:
+        db:
+          condition: service_healthy
+      ports:
+        - "8080:8080"
+      environment:
+        NC_DB: "pg://db:5432?user=$POSTGRES_USER&p=$POSTGRES_PASSWORD&d=$POSTGRES_DB"
 volumes:
   db_data:
   nc_data:

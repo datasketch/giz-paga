@@ -1,0 +1,31 @@
+Atributo,Descripción
+Funcionario,Nombre de la persona que llena el formulario
+Compromiso,Nombre del compromiso
+Hito primer compromiso,Nombre hito del compromiso 1
+Hito segundo compromiso,Nombre hito del compromiso 2
+Hito tercer compromiso,Nombre hito del compromiso 3
+Hito cuarto compromiso,Nombre hito del compromiso 4
+Hito quinto compromiso,Nombre hito del compromiso 5
+Hito sexto compromiso,Nombre hito del compromiso 6
+Hito séptimo compromiso,Nombre hito del compromiso 7
+Hito octavo compromiso,Nombre hito del compromiso 8
+Hito noveno compromiso,Nombre hito del compromiso 9
+Hito décimo compromiso,Nombre hito del compromiso 10
+Fecha registro,Fecha del registro de formulario
+Descripción,Descripción del avance del hito
+Indicador 1,Porcentaje de avance de implementación del hito
+Indicador 2,Estado del cumplimiento del hito
+Indicador 3 - contraparte,La contraparte ha respondido con sus responsabilidades con la entidad responsable durante el compromiso
+Indicador 3 - justificación,Justificación indicador 3
+Indicador 4,Número de actividades realizadas con la inclusión de otros actores relevantes en el compromiso
+Indicador 4 - justificación,Descripción de actividades realizadas con la inclusión de otros actores relevantes en el compromiso
+Indicador 5,Número de personas que participaron en cada uno de los hitos
+Indicador 6,Sectores a los que pertenecen los participantes de las actividades en cada hito de los compromisos
+Indicador 6 - justificación,Nombre del nuevo sector
+Indicador 7 - realidad inicial,Descripción de la realidad inicial previa a la implementación del hito del compromiso
+Indicador 7 - realidad posterior,"Descripción de la realidad una vez implementado o avanzado el hito del compromiso "
+Indicador 8,El hito se relaciona con alguna iniciativa internacional ligada con Gobierno Abierto
+Indicador 8 - iniciativas,Iniciativas internacionales ligadas con Gobierno Abierto con las que se relaciona el hito
+Indicador 8 - nuevo,Nombre de nueva iniciativa
+Indicador 8 - especificación,Punto en concreto de la iniciativa internacional se relaciona el hito
+Indicador 8 - justificación,Justificación Indicador 8 - especificación
