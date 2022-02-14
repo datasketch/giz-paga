@@ -8,6 +8,7 @@ services:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+      - nc_data:/usr/app/data
     environment:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
@@ -42,3 +43,4 @@ services:
 
 volumes:
   db_data:
+  nc_data:
