@@ -29,14 +29,14 @@ CREATE TABLE "public"."contrapartes" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."diccionario_contrapartes";
+DROP TABLE IF EXISTS "public"."diccionario-contrapartes";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "diccionario_contrapartes_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "diccionario-contrapartes_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."diccionario_contrapartes" (
-    "id" int4 NOT NULL DEFAULT nextval('"diccionario_contrapartes_id_seq"'::regclass),
+CREATE TABLE "public"."diccionario-contrapartes" (
+    "id" int4 NOT NULL DEFAULT nextval('"diccionario-contrapartes_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Atributo" varchar,
@@ -87,14 +87,14 @@ CREATE TABLE "public"."entidades" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."diccionario_entidades";
+DROP TABLE IF EXISTS "public"."diccionario-entidades";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "diccionario_entidades_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "diccionario-entidades_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."diccionario_entidades" (
-    "id" int4 NOT NULL DEFAULT nextval('"diccionario_entidades_id_seq"'::regclass),
+CREATE TABLE "public"."diccionario-entidades" (
+    "id" int4 NOT NULL DEFAULT nextval('"diccionario-entidades_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Atributo" varchar,
@@ -102,14 +102,14 @@ CREATE TABLE "public"."diccionario_entidades" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."grupo_nucleo";
+DROP TABLE IF EXISTS "public"."grupo-nucleo";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "grupo_nucleo_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "grupo-nucleo_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."grupo_nucleo" (
-    "id" int4 NOT NULL DEFAULT nextval('"grupo_nucleo_id_seq"'::regclass),
+CREATE TABLE "public"."grupo-nucleo" (
+    "id" int4 NOT NULL DEFAULT nextval('"grupo-nucleo_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Compromiso" varchar,
@@ -134,14 +134,14 @@ CREATE TABLE "public"."grupo_nucleo" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."diccionario_grupo_nucleo";
+DROP TABLE IF EXISTS "public"."diccionario-grupo-nucleo";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "diccionario_grupo_nucleo_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "diccionario-grupo-nucleo_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."diccionario_grupo_nucleo" (
-    "id" int4 NOT NULL DEFAULT nextval('"diccionario_grupo_nucleo_id_seq"'::regclass),
+CREATE TABLE "public"."diccionario-grupo-nucleo" (
+    "id" int4 NOT NULL DEFAULT nextval('"diccionario-grupo-nucleo_id_seq"'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Atributo" varchar,
@@ -149,14 +149,14 @@ CREATE TABLE "public"."diccionario_grupo_nucleo" (
     PRIMARY KEY ("id")
 );
 
-DROP TABLE IF EXISTS "public"."info_general_compromisos";
+DROP TABLE IF EXISTS "public"."info-general-compromisos";
 
 -- Sequence and defined type
-CREATE SEQUENCE IF NOT EXISTS "info_general_compromisos_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "info-general-compromisos_id_seq";
 
 -- Table Definition
-CREATE TABLE "public"."info_general_compromisos" (
-    "id" int4 NOT NULL DEFAULT nextval('info_general_compromisos_id_seq'::regclass),
+CREATE TABLE "public"."info-general-compromisos" (
+    "id" int4 NOT NULL DEFAULT nextval('info-general-compromisos_id_seq'::regclass),
     "created_at" timestamp DEFAULT now(),
     "updated_at" timestamp DEFAULT now(),
     "Nombre_compromisos" text,
