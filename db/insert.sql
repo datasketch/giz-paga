@@ -2,7 +2,7 @@
 
 \copy "diccionario-contrapartes"("Atributo","Descripción") from 'diccionario_contrapartes.csv' csv header
 
-\copy entidades("Funcionario","Compromiso","Hito primer compromiso","Hito segundo compromiso","Hito tercer compromiso","Hito cuarto compromiso","Hito quinto compromiso","Hito sexto compromiso","Hito séptimo compromiso","Hito octavo compromiso","Hito noveno compromiso","Hito décimo compromiso","Fecha de registro","Descripción","Indicador 1","Indicador 2","Indicador 3 - contraparte","Indicador 3 - justificación","Indicador 4","Indicador 4 - justificación","Indicador 5","Indicador 6","Indicador 6 - nuevo","Indicador 7 - realidad inicial","Indicador 7 - realidad posterior","Indicador 8","Indicador 8 - iniciativas","Indicador 8 - nuevo","Indicador 8 - especificación","Indicador 8 - justificación") from 'entidades.csv' csv header
+\copy entidades("Funcionario","Compromiso","Hito primer compromiso","Hito segundo compromiso","Hito tercer compromiso","Hito cuarto compromiso","Hito quinto compromiso","Hito sexto compromiso","Hito séptimo compromiso","Hito octavo compromiso","Hito noveno compromiso","Hito décimo compromiso","Fecha de registro","Descripción","Indicador 1","Indicador 2","Indicador 3 - contraparte","Indicador 3 - justificación","Indicador 4","Indicador 4 - justificación","Indicador 5","Indicador 6","Indicador 6 - nuevo","Indicador 7 - realidad inicial","Indicador 7 - realidad posterior","Indicador 8","Indicador 8 - iniciativas","Indicador 8 - nuevo","Indicador 8 - especificación","Indicador 8 - justificación","Entidad_responsable_de_registrar_el_avance") from 'entidades.csv' csv header
 
 \copy "diccionario-entidades"("Atributo","Descripción") from 'diccionario_entidades.csv' csv header
 
