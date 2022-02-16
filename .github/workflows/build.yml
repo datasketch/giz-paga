@@ -20,7 +20,5 @@ jobs:
         with:
           extended: true
           hugo-version: '0.88.1'
-      - name: Setup env vars
-        run: export API_TOKEN=${{secrets.API_TOKEN}} && export API_HOST=${{secrets.API_HOST}}
       - name: Build
-        run: hugo --minify --cleanDestinationDir
+        run: export API_TOKEN=${{secrets.API_TOKEN}} && export API_HOST=${{secrets.API_HOST}} && hugo --minify --cleanDestinationDir
