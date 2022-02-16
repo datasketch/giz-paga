@@ -84,6 +84,7 @@ CREATE TABLE "public"."entidades" (
     "Indicador 8 - nuevo" varchar,
     "Indicador 8 - especificación" text,
     "Indicador 8 - justificación" text,
+    "Entidad_responsable_de_registrar_el_avance" text
     PRIMARY KEY ("id")
 );
 
