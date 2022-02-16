@@ -21,8 +21,8 @@ services:
       image: nocodb/nocodb:0.84.10
       restart: always
       depends_on:
-        - db
-          # condition: service_healthy
+        db:
+          condition: service_healthy
       ports:
         - "8080:8080"
       environment:
