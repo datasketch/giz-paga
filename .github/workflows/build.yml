@@ -21,4 +21,4 @@ jobs:
           extended: true
           hugo-version: '0.88.1'
       - name: Build
-        run: export API_TOKEN=${{secrets.API_TOKEN}} && export API_HOST=${{secrets.API_HOST}} && hugo --minify --cleanDestinationDir
+        run: export API_TOKEN=${{secrets.API_TOKEN}} && export API_HOST=${{secrets.API_HOST}} && export APP_URL="https://datasketch.shinyapps.io/paga-app/" && hugo --minify --cleanDestinationDir

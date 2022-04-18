@@ -9,7 +9,7 @@ allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
 osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
 
 [security.funcs]
-getenv = ['^HUGO_', 'API_HOST', 'API_TOKEN']
+getenv = ['^HUGO_', 'API_HOST', 'API_TOKEN', 'APP_URL']
 [security.http]
 methods = ['(?i)GET|POST']
 urls = ['.*']
