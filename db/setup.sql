@@ -1,4 +1,17 @@
+DROP TABLE IF EXISTS "public"."usuarios";
+
+CREATE SEQUENCE IF NOT EXISTS usuarios_id_seq;
+
 DROP TABLE IF EXISTS "public"."contrapartes";
+
+CREATE TABLE "public"."usuarios" (
+    "id" int4 NOT NULL DEFAULT nextval('usuarios_id_seq'::regclass),
+    "created_at" timestamp DEFAULT now(),
+    "updated_at" timestamp DEFAULT now(),
+    "email" text NOT NULL,
+    "password" text NOT NULL,
+    PRIMARY KEY ("id")
+);
 
 -- Sequence and defined type
 CREATE SEQUENCE IF NOT EXISTS contrapartes_id_seq;
