@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://json.schemastore.org/github-workflow.json": "file:///Users/ddazal/Documents/projects/datasketch/giz-paga/.github/workflows/build.yml"
-    }
-}
