@@ -45,8 +45,12 @@ async function login(data) {
   if (!response.ok) {
     return showLoginError();
   }
+  const formSlugInput = document.getElementById('form-slug');
+  const formSlug = formSlugInput.value;
   const users = await response.json();
-  const user = users.find((u) => u.email === data.email && u.password === data.password);
+  const user = users.find((u) => u.email === data.email
+    && u.password === data.password
+    && u.grupo.toLowerCase() === formSlug.toLowerCase() && !u.inactivo);
   if (!user) {
     return showLoginError();
   }

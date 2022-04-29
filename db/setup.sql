@@ -10,6 +10,8 @@ CREATE TABLE "public"."usuarios" (
     "updated_at" timestamp DEFAULT now(),
     "email" text NOT NULL,
     "password" text NOT NULL,
+    "grupo" text NOT NULL,
+    "inactivo" BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY ("id")
 );
 
