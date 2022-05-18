@@ -1,6 +1,7 @@
 const entities = {
   Funcionario: 'datosGeneralesNombreDeLaPersonaQueLlenaElFormulario',
   Compromiso: 'datosGeneralesNombreDelCompromiso',
+  Entidad_responsable_de_registrar_el_avance: 'nombreDeLaEntidad',
   'Hito primer compromiso': 'nombreHitoDelCompromiso1',
   'Hito segundo compromiso': 'nombreHitoDelCompromiso2',
   'Hito tercer compromiso': 'nombreHitoDelCompromiso3',
