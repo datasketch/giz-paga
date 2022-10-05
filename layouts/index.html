@@ -1,89 +1,100 @@
 {{ define "main" }}
+<input type="hidden" id="app-url" name="app" value='{{ getenv "APP_URL" }}'>
 <div class="grid grid-cols-1 lg:grid-cols-12">
-    <div class="bg-blue-dark py-36 lg:py-14 text-center lg:col-start-1 lg:col-end-9 observer">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase font-bold mb-6 lg:mb-10 xl:mb-12"
-            style="color: #3B3F66;">
-            Ecuador
-        </h2>
-        <h1
-            class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase font-bold text-blue-dark bg-white py-4 lg:py-6 mb-6 lg:mb-10 xl:mb-14">
-            <span class="block text-lg lg:text-xl font-normal">ESTAMOS EN <strong>ETAPA DE IMPLEMENTACIÓN</strong>
-                DEL</span>
-            i PLAN DE ACCIÓN
-        </h1>
-        <p class="text-white text-lg lg:text-xl">
-            PLAN DE ACCIÓN DE GOBIERNO ABIERTO <span class="block font-bold">2019 - 2022</span>
+  <div class="bg-blue-dark py-36 lg:py-14 text-center lg:col-start-1 lg:col-end-9 observer">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase font-bold mb-6 lg:mb-10 xl:mb-12"
+      style="color: #3B3F66;">
+      Ecuador
+    </h2>
+    <h1
+      class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase font-bold text-blue-dark bg-white py-4 lg:py-6 mb-6 lg:mb-10 xl:mb-14">
+      <span class="block text-lg lg:text-xl font-normal">ESTAMOS EN <strong>ETAPA DE IMPLEMENTACIÓN</strong>
+        DEL</span>
+      i PLAN DE ACCIÓN
+    </h1>
+    <p class="text-white text-lg lg:text-xl">
+      PLAN DE ACCIÓN DE GOBIERNO ABIERTO <span class="block font-bold">2019 - 2022</span>
+    </p>
+  </div>
+  <div
+    class="lg:col-start-9 lg:col-end-13 p-8 lg:px-12 xl:px-20 text-center lg:text-left py-12 grid place-items-center">
+    <p class="font-medium lg:text-lg xl:text-xl w-10/12 md:w-8/12 lg:w-full mx-auto text-center lg:text-left">
+      Esta plataforma presenta los indicadores de seguimiento, monitoreo y evaluación del Plan de Acción del
+      Gobierno Abierto de Ecuador, para conocer los avances de los compromisos presentados por sus entidades
+      responsables y contrapartes.
+    </p>
+  </div>
+  <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
+    <div class="text-center mb-6 md:mb-8 lg:mb-10 xl:mb-12 mx-auto w-10/12">
+      <h2 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-8 text-grey-dark">
+        Estado de avance del Plan
+      </h2>
+      <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:text-left mb-4 lg:mb-6">
+        <p class="italic lg:w-6/12 mb-2 lg:mb-0 text-left">Fecha de actualización: Octubre 22 de 2021</p>
+        <p class="lg:w-5/12">
+          El estado de cumplimiento del plan se calcula de acuerdo al reporte de avance de los hitos de los
+          compromisos. Si no se ha reportado información, el avance del hito es 0%.
         </p>
+      </div>
+      <div class="relative h-48">
+        <canvas id="avances-general"></canvas>
+      </div>
+      <h3 class="mt-24 text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">
+        Estado de avance de los compromisos
+      </h3>
+      <div class="relative w-full h-0" style="padding-bottom: 56.25%;">
+        <canvas id="avances-por-compromiso"></canvas>
+      </div>
+      <h3 class="mt-6 text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">
+        Conoce el avance
+      </h3>
+      <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8">
+        Explora la implementación de compromisos que hacen parte del
+        <a class="font-bold text-blue-dark" href="{{ relref . " primer-plan.md" }}">Primer Plan de Acción.</a>
+      </p>
     </div>
-    <div
-        class="lg:col-start-9 lg:col-end-13 p-8 lg:px-12 xl:px-20 text-center lg:text-left py-12 grid place-items-center">
-        <p class="font-medium lg:text-lg xl:text-xl w-10/12 md:w-8/12 lg:w-full mx-auto text-center lg:text-left">
-            Esta plataforma presenta los indicadores de seguimiento, monitoreo y evaluación del Plan de Acción del
-            Gobierno Abierto de Ecuador, para conocer los avances de los compromisos presentados por sus entidades
-            responsables y contrapartes.
-        </p>
+    {{ partial "how-to.html" . }}
+  </div>
+  <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13">
+    <div class="text-center lg:text-left mx-auto w-10/12 md:w-8/12 lg:w-7/12">
+      <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8 text-center mx-auto w-10/12 md:w-8/12 lg:w-9/12 xl:w-8/12">
+        Para conocer como funciona la herramienta de visualización de indicadores da clic en este video tutorial
+        sobre su uso
+      </p>
+      <video class="w-full" src="/videos/video-tutorial.mp4" controls></video>
     </div>
-    <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
-        <div class="text-center mb-6 md:mb-8 lg:mb-10 xl:mb-12 mx-auto w-10/12">
-            <h2 class="text-xl lg:text-2xl xl:text-3xl font-bold mb-8 text-grey-dark">
-                Estado de avance del Plan
-            </h2>
-            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:text-left mb-4 lg:mb-6">
-                <p class="italic lg:w-6/12 mb-2 lg:mb-0 text-left">Fecha de actualización: Octubre 22 de 2021</p>
-                <p class="lg:w-5/12">
-                    El estado de cumplimiento del plan se calcula de acuerdo al reporte de avance de los hitos de los
-                    compromisos. Si no se ha reportado información, el avance del hito es 0%.
-                </p>
-            </div>
-            <iframe class="w-full h-40 -mt-4" src="/graficas/porcentaje_cumplimiento.html" frameborder="0"></iframe>
-            <h3 class="mt-24 text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">Estado de
-                avance de los compromisos</h3>
-            <iframe class="w-full h-96 mb-4 lg:mb-6 xl:mb-8" src="/graficas/compromisos_cumplimiento.html"
-                frameborder="0"></iframe>
-            <h3 class="mt-24 text-xl lg:text-2xl xl:text-3xl font-bold mb-4 lg:mb-6 xl:mb-8 text-grey-dark">
-                Conoce el avance
-            </h3>
-            <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8">Explora la implementación de compromisos que hacen parte del
-                <a class="font-bold text-blue-dark" href="{{ relref . " primer-plan.md" }}">Primer Plan de Acción.</a>
-            </p>
-        </div>
-        {{ partial "how-to.html" . }}
+  </div>
+  <div class="bg-orange py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-9 grid place-items-center">
+    <div>
+      <h2 class="block normal-case text-white text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 xl:mb-12">
+        Descarga el reporte de <br> seguimiento trimestral
+      </h2>
+      <a class="uppercase py-3 px-6 " href='{{ "archivos/reporte_trimestral.pdf" | absURL }}' target="_blank"
+        style="background-color: #FBF9F8;" download="Reporte trimestral">Reporte Trimestral</a>
     </div>
-    <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13">
-        <div class="text-center lg:text-left mx-auto w-10/12 md:w-8/12 lg:w-7/12">
-            <p class="xl:text-lg mb-4 lg:mb-6 xl:mb-8 text-center mx-auto w-10/12 md:w-8/12 lg:w-9/12 xl:w-8/12">
-                Para conocer como funciona la herramienta de visualización de indicadores da clic en este video tutorial
-                sobre su uso
-            </p>
-            <video class="w-full" src="/videos/video-tutorial.mp4" controls></video>
-        </div>
+  </div>
+  <picture class="lg:col-start-9 lg:col-end-13">
+    <source srcset="/images/inicio/descarga-reporte@2x.png" media="(min-width: 1024px)">
+    <img class="w-full h-full object-cover object-center" srcset="/images/inicio/descarga-reporte.png"
+      alt="Descarga reporte">
+  </picture>
+  <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
+    <div class="text-center w-10/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mx-auto">
+      <img class="h-36 lg:h-48 mx-auto mb-6 lg:mb-10" src="/images/general/logo-gobierno-abierto.png"
+        alt="logo gobierno abierto">
+      <p class="font-bold text-lg lg:text-xl mb-6 lg:mb-10">
+        Esta plataforma es parte del Portal Nacional de Gobierno Abierto Ecuador
+      </p>
+      <a href="https://www.gobiernoabierto.ec/"
+        class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mb-4 lg:mb-6 xl:mb-8"
+        target="_blank">
+        IR A PÁGINA PRINCIPAL</a>
     </div>
-    <div class="bg-orange py-16 lg:py-20 xl:py-24 text-center lg:col-start-1 lg:col-end-9 grid place-items-center">
-        <div>
-            <h2 class="block normal-case text-white text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 xl:mb-12">
-                Descarga el reporte de <br> seguimiento trimestral
-            </h2>
-            <a class="uppercase py-3 px-6 " href='{{ "archivos/reporte_trimestral.pdf" | absURL }}' target="_blank"
-                style="background-color: #FBF9F8;" download="Reporte trimestral">Reporte Trimestral</a>
-        </div>
-    </div>
-    <picture class="lg:col-start-9 lg:col-end-13">
-        <source srcset="/images/inicio/descarga-reporte@2x.png" media="(min-width: 1024px)">
-        <img class="w-full h-full object-cover object-center" srcset="/images/inicio/descarga-reporte.png"
-            alt="Descarga reporte">
-    </picture>
-    <div class="py-12 lg:py-16 xl:py-20 lg:col-start-1 lg:col-end-13" style="background-color: #E8E7E6;">
-        <div class="text-center w-10/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mx-auto">
-            <img class="h-36 lg:h-48 mx-auto mb-6 lg:mb-10" src="/images/general/logo-gobierno-abierto.png"
-                alt="logo gobierno abierto">
-            <p class="font-bold text-lg lg:text-xl mb-6 lg:mb-10">
-                Esta plataforma es parte del Portal Nacional de Gobierno Abierto Ecuador
-            </p>
-            <a href="https://www.gobiernoabierto.ec/"
-                class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mb-4 lg:mb-6 xl:mb-8"
-                target="_blank">
-                IR A PÁGINA PRINCIPAL</a>
-        </div>
-    </div>
+  </div>
 </div>
+{{ end }}
+
+{{ define "js" }}
+{{ $home := resources.Get "js/home.js" | js.Build (dict "minify" hugo.IsProduction) }}
+<script src="{{ $home.Permalink }}"></script>
 {{ end }}

@@ -28,6 +28,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@tailwindcss/aspect-ratio": "^0.3.0"
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "axios": "^1.0.0",
+    "chart.js": "^3.9.1",
+    "chartjs-plugin-datalabels": "^2.1.0",
+    "lodash.chunk": "^4.2.0"
   }
 }
