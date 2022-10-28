@@ -28,11 +28,13 @@
 {{ end }}
 
 {{ define "meta" }}
-<link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
+<!-- <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css"> -->
+<link rel="stylesheet" href="https://unpkg.com/formiojs@4.14.6/dist/formio.full.min.css">
 {{ end }}
 
 {{ define "js" }}
-    <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
+    <!-- <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script> -->
+    <script src="https://unpkg.com/formiojs@4.14.6/dist/formio.full.min.js"></script>
     {{ $forms := resources.Get "js/forms.js" | js.Build (dict "minify" hugo.IsProduction )}}
     <script src="{{ $forms.Permalink }}"></script>
 {{ end }}
