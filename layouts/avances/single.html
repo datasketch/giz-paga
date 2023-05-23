@@ -1,29 +1,31 @@
 {{ define "main" }}
 <div class="py-16 px-4" id="container">
-    <input type="hidden" id="form-slug" value="{{ .Params.form_slug }}">
-    <form id="login-form" class="w-full px-8 py-6 mx-auto max-w-lg bg-white shadow">
-        <h2 class="font-bold text-xl">Iniciar sesión</h2>
-        <div class="flex flex-col mt-4">
-            <label for="email">Correo electrónico</label>
-            <input type="email" name="email" id="email" class="w-full mt-1 border p-2" autofocus required>
-        </div>
-        <div class="flex flex-col mt-4">
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" class="w-full mt-1 border p-2" required>
-        </div>
-        <p class="text-center text-red-700 hidden" id="login-error">Las credenciales son incorrectas</p>
-        <button type="submit" class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mt-4">Ingresar</button>
-    </form>
-    <div id="logged-in" class="hidden">
-        <input type="hidden" id="form-url" value="{{ .Params.form_url }}">
-        <input type="hidden" id="form-type" value="{{ .Params.form_type }}">
-        <input type="hidden" id="api-host" value='{{ getenv "API_HOST" }}'>
-        <input type="hidden" id="api-token" value='{{ getenv "API_TOKEN" }}'>
-        <div class="w-full px-4 md:w-8/12 md:mx-auto">
-            <h1 class="block text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 text-grey-dark">{{ .Title }}</h1>
-            <div id="form"></div>
-        </div>
+  {{ $components := index .Site.Data (.Params.form_slug | lower) }}
+  <input type="hidden" id="form-slug" value="{{ .Params.form_slug }}">
+  <input type="hidden" id="form-components" value="{{$components | jsonify }}">
+  <form id="login-form" class="w-full px-8 py-6 mx-auto max-w-lg bg-white shadow">
+    <h2 class="font-bold text-xl">Iniciar sesión</h2>
+    <div class="flex flex-col mt-4">
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email" class="w-full mt-1 border p-2" autofocus required>
     </div>
+    <div class="flex flex-col mt-4">
+      <label for="password">Contraseña</label>
+      <input type="password" name="password" id="password" class="w-full mt-1 border p-2" required>
+    </div>
+    <p class="text-center text-red-700 hidden" id="login-error">Las credenciales son incorrectas</p>
+    <button type="submit"
+      class="uppercase py-2 px-8 bg-grey-dark text-white inline-block cursor-pointer mt-4">Ingresar</button>
+  </form>
+  <div id="logged-in" class="hidden">
+    <input type="hidden" id="form-type" value="{{ .Params.form_type }}">
+    <input type="hidden" id="api-host" value='{{ getenv "API_HOST" }}'>
+    <input type="hidden" id="api-token" value='{{ getenv "API_TOKEN" }}'>
+    <div class="w-full px-4 md:w-8/12 md:mx-auto">
+      <h1 class="block text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 text-grey-dark">{{ .Title }}</h1>
+      <div id="form"></div>
+    </div>
+  </div>
 </div>
 {{ end }}
 
@@ -33,8 +35,8 @@
 {{ end }}
 
 {{ define "js" }}
-    <!-- <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script> -->
-    <script src="https://unpkg.com/formiojs@4.14.6/dist/formio.full.min.js"></script>
-    {{ $forms := resources.Get "js/forms.js" | js.Build (dict "minify" hugo.IsProduction )}}
-    <script src="{{ $forms.Permalink }}"></script>
+<!-- <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script> -->
+<script src="https://unpkg.com/formiojs@4.14.6/dist/formio.full.min.js"></script>
+{{ $forms := resources.Get "js/forms.js" | js.Build (dict "minify" hugo.IsProduction )}}
+<script src="{{ $forms.Permalink }}"></script>
 {{ end }}

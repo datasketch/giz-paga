@@ -6,12 +6,15 @@ const loggedIn = document.getElementById('logged-in');
 const loginError = document.getElementById('login-error');
 const apiTokenInput = document.getElementById('api-token');
 const apiHostInput = document.getElementById('api-host');
+const formComponents = document.getElementById('form-components');
 
 const apiToken = apiTokenInput.value;
 const apiHost = apiHostInput.value.endsWith('/') ? apiHostInput.value.slice(0, -1) : apiHostInput.value;
+const components = JSON.parse(formComponents.value);
 
 apiTokenInput.remove();
 apiHostInput.remove();
+formComponents.remove();
 
 const loggedInRef = loggedIn;
 
@@ -80,41 +83,42 @@ async function onLoggedIn() {
   container.appendChild(loggedInRef);
   loggedInRef.classList.remove('hidden');
 
-  const formUrlInput = document.getElementById('form-url');
   const formTypeInput = document.getElementById('form-type');
   const formSlugInput = document.getElementById('form-slug');
-  const formUrl = formUrlInput.value;
   const formType = formTypeInput.value;
   const formSlug = formSlugInput.value;
 
   formTypeInput.remove();
-  formUrlInput.remove();
   formSlugInput.remove();
 
   try {
-    const form = await window.Formio.createForm(document.getElementById('form'), formUrl);
+    const form = await window.Formio.createForm(document.getElementById('form'), {
+      components,
+    });
     form.on('submit', async (submission) => {
       const data = getNormalizedData(submission.data, formType);
       save(data, formSlug).then(() => {
-        document.location.reload();
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth',
+        });
+        form.resetValue();
+        alert('Los datos han sido guardados');
+        // document.location.reload();
       }).catch((err) => {
-        // eslint-disable-next-line no-alert
         alert('Se ha presentado un error');
-        // eslint-disable-next-line no-console
         console.error(err);
       });
     });
   } catch (error) {
-    // eslint-disable-next-line no-alert
     alert('Se ha presentado un error');
-    // eslint-disable-next-line no-console
     console.error(error);
   }
 }
 
 (() => {
   if (!apiToken && !apiHost) {
-    // eslint-disable-next-line no-alert
     alert('Se ha producido un error. Contacte al administrador del sitio web');
     return;
   }

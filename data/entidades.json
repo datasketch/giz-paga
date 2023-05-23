@@ -1,0 +1,1022 @@
+[
+  {
+    "label": "[Datos generales] Nombre de la persona que llena el formulario",
+    "description": "Ejemplo: Andrés Bermúdez Londoño",
+    "autoExpand": false,
+    "tableView": true,
+    "validate": {
+      "required": true
+    },
+    "key": "datosGeneralesNombreDeLaPersonaQueLlenaElFormulario",
+    "type": "textarea",
+    "rows": 1,
+    "input": true
+  },
+  {
+    "label": "[Datos generales] Nombre del compromiso",
+    "widget": "choicesjs",
+    "description": "Ejemplo: Desarrollo de capacidades para garantizar la transparencia y el acceso a la información pública",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Elaboración colaborativa de la política de datos abiertos y la guía para su implementación",
+          "value": "Elaboración colaborativa de la política de datos abiertos y la guía para su implementación"
+        },
+        {
+          "label": "Re-diseño y actualización del portal de datos abiertos",
+          "value": "Re-diseño y actualización del portal de datos abiertos"
+        },
+        {
+          "label": "Plataforma de Información Abierta de Contratación Pública",
+          "value": "Plataforma de Información Abierta de Contratación Pública"
+        },
+        {
+          "label": "Implementación de los derechos de participación y acceso a la información ambiental (Escazú)",
+          "value": "Implementación de los derechos de participación y acceso a la información ambiental (Escazú)"
+        },
+        {
+          "label": "Co-diseño de la hoja de ruta para la implementación del Estándar EITI para mejorar la transparencia en las industrias extractivas en Ecuador (petróleo, gas y minería)",
+          "value": "Co-diseño de la hoja de ruta para la implementación del Estándar EITI para mejorar la transparencia en las industrias extractivas en Ecuador (petróleo, gas y minería)"
+        },
+        {
+          "label": "Desarrollo de capacidades para garantizar la transparencia y el acceso a la información pública",
+          "value": "Desarrollo de capacidades para garantizar la transparencia y el acceso a la información pública"
+        },
+        {
+          "label": "Co-creación del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género y creación de un observatorio ciudadano de violencia de género y diversidades sexo-genéricas",
+          "value": "Co-creación del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género y creación de un observatorio ciudadano de violencia de género y diversidades sexo-genéricas"
+        },
+        {
+          "label": "Primer laboratorio de innovación ciudadana de Ecuador",
+          "value": "Primer laboratorio de innovación ciudadana de Ecuador"
+        },
+        {
+          "label": "Ciudadanización de la mejora de los trámites (simplificación)",
+          "value": "Ciudadanización de la mejora de los trámites (simplificación)"
+        },
+        {
+          "label": "Co-creación de una estrategia para la mejora de la Calidad de los Servicios Públicos de la Función Ejecutiva",
+          "value": "Co-creación de una estrategia para la mejora de la Calidad de los Servicios Públicos de la Función Ejecutiva"
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "datosGeneralesNombreDelCompromiso",
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre de la entidad",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Ministerio de Telecomunicaciones y de la Sociedad de la Información",
+          "value": "Ministerio de Telecomunicaciones y de la Sociedad de la Información"
+        },
+        {
+          "label": "Secretaría Nacional de Planificación",
+          "value": "Secretaría Nacional de Planificación"
+        },
+        {
+          "label": "Servicio Nacional de Contratación Pública",
+          "value": "Servicio Nacional de Contratación Pública"
+        },
+        {
+          "label": "Ministerio del Ambiente, Agua y Transición Ecológica",
+          "value": "Ministerio del Ambiente, Agua y Transición Ecológica"
+        },
+        {
+          "label": "Ministerio de Energía y Recursos Naturales No Renovables",
+          "value": "Ministerio de Energía y Recursos Naturales No Renovables"
+        },
+        {
+          "label": "Defensoría del Pueblo",
+          "value": "Defensoría del Pueblo"
+        },
+        {
+          "label": "Secretaría de Derechos Humanos",
+          "value": "Secretaría de Derechos Humanos"
+        },
+        {
+          "label": "Presidencia de la República del Ecuador",
+          "value": "Presidencia de la República del Ecuador"
+        },
+        {
+          "label": "Ministerio del Trabajo",
+          "value": "Ministerio del Trabajo"
+        }
+      ]
+    },
+    "key": "nombreDeLaEntidad",
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 1",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Validación de la política de datos abiertos, elaborada con insumos recibidos de participantes de los sectores público, privado, academia, sociedad civil y ciudadanía, que fueron obtenidos en mesas realizadas de manera previa a la formalización del presente compromiso.",
+          "value": "Hito 1: Validación de la política de datos abiertos, elaborada con insumos recibidos de participantes de los sectores público, privado, academia, sociedad civil y ciudadanía, que fueron obtenidos en mesas realizadas de manera previa a la formalización del presente compromiso."
+        },
+        {
+          "label": "Hito 2: Mapeo de actores públicos, académicos, privados y de sociedad civil relacionados con la temática, y desarrollo de la metodología para la co-creación de la Guía para la implementación de la Política.",
+          "value": "Hito 2: Mapeo de actores públicos, académicos, privados y de sociedad civil relacionados con la temática, y desarrollo de la metodología para la co-creación de la Guía para la implementación de la Política."
+        },
+        {
+          "label": "Hito 3: Co-creación de la Guía para la implementación de la Política que incluye modelo de gobernanza y gestión de datos abiertos.",
+          "value": "Hito 3: Co-creación de la Guía para la implementación de la Política que incluye modelo de gobernanza y gestión de datos abiertos."
+        },
+        {
+          "label": "Hito 4: Identificación y selección de indicadores para la medición de la implementación de la política de datos abiertos con la participación de actores mapeados.",
+          "value": "Hito 4: Identificación y selección de indicadores para la medición de la implementación de la política de datos abiertos con la participación de actores mapeados."
+        },
+        {
+          "label": "Hito 5: Difusión de la Política, Guía e Indicadores para la gestión de datos abiertos y sus estándares de apertura.",
+          "value": "Hito 5: Difusión de la Política, Guía e Indicadores para la gestión de datos abiertos y sus estándares de apertura."
+        },
+        {
+          "label": "Hito 6: Capacitación sobre la Guía de datos abiertos dirigida a funcionarios públicos y usuarios.",
+          "value": "Hito 6: Capacitación sobre la Guía de datos abiertos dirigida a funcionarios públicos y usuarios."
+        },
+        {
+          "label": "Hito 7: Elaboración y publicación de informe de la implementación de la política de datos abiertos.",
+          "value": "Hito 7: Elaboración y publicación de informe de la implementación de la política de datos abiertos."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso1",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Elaboración colaborativa de la política de datos abiertos y la guía para su implementación"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 2",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Diagnóstico de la situación actual de la plataforma de datos abiertos existente.",
+          "value": "Hito 1: Diagnóstico de la situación actual de la plataforma de datos abiertos existente."
+        },
+        {
+          "label": "Hito 2: Re-diseño y actualización del portal de datos abiertos existente, que incluya un ejercicio de pruebas de su implementación.",
+          "value": "Hito 2: Re-diseño y actualización del portal de datos abiertos existente, que incluya un ejercicio de pruebas de su implementación."
+        },
+        {
+          "label": "Hito 3: Realización de retos públicos (concursos, hackatones, etc.) para la creación de soluciones a problemas a partir del uso de datos abiertos; que además permita retroalimentar el portal de datos abiertos re-diseñado y actualizado.",
+          "value": "Hito 3: Realización de retos públicos (concursos, hackatones, etc.) para la creación de soluciones a problemas a partir del uso de datos abiertos; que además permita retroalimentar el portal de datos abiertos re-diseñado y actualizado."
+        },
+        {
+          "label": "Hito 4: Sistematización de recomendaciones y ajuste del portal de datos abiertos.",
+          "value": "Hito 4: Sistematización de recomendaciones y ajuste del portal de datos abiertos."
+        },
+        {
+          "label": "Hito 5: Evaluación del portal re-diseñado y actualizado.",
+          "value": "Hito 5: Evaluación del portal re-diseñado y actualizado."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso2",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Re-diseño y actualización del portal de datos abiertos"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 3",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Identificación de actores clave gubernamentales y no gubernamentales para fortalecer el trabajo interinstitucional y la participación ciudadana que promueva la transparencia y la concurrencia en el Sistema Nacional de Contratación Pública.",
+          "value": "Hito 1: Identificación de actores clave gubernamentales y no gubernamentales para fortalecer el trabajo interinstitucional y la participación ciudadana que promueva la transparencia y la concurrencia en el Sistema Nacional de Contratación Pública."
+        },
+        {
+          "label": "Hito 2: Capacitación sobre estándares de Open Contracting Data Estándar (OCDS) y Open Contracting for Infraestructure Data Estándar (OC4IDS) dirigida a los responsables de compras públicas y actores clave, previamente identificados.",
+          "value": "Hito 2: Capacitación sobre estándares de Open Contracting Data Estándar (OCDS) y Open Contracting for Infraestructure Data Estándar (OC4IDS) dirigida a los responsables de compras públicas y actores clave, previamente identificados."
+        },
+        {
+          "label": "Hito 3: Capacitación en la Metodología CoST dirigida a los responsables de compras públicas y actores clave, previamente identificados.",
+          "value": "Hito 3: Capacitación en la Metodología CoST dirigida a los responsables de compras públicas y actores clave, previamente identificados."
+        },
+        {
+          "label": "Hito 4: Diseño del proyecto de implementación de estándares OCDS y OC4IDS en el Sistema Nacional de Compras Públicas, que incluya: metas, talento humano y lo comprometerá con una visión compartida.",
+          "value": "Hito 4: Diseño del proyecto de implementación de estándares OCDS y OC4IDS en el Sistema Nacional de Compras Públicas, que incluya: metas, talento humano y lo comprometerá con una visión compartida."
+        },
+        {
+          "label": "Hito 5: Mapeo de necesidades de los usuarios, de campos de datos clave y documentos necesarios para Open Contracting Data Standard (OCDS), Open Contracting for Infraestructure Data Estándar (OC4IDS) y metodología CoST.",
+          "value": "Hito 5: Mapeo de necesidades de los usuarios, de campos de datos clave y documentos necesarios para Open Contracting Data Standard (OCDS), Open Contracting for Infraestructure Data Estándar (OC4IDS) y metodología CoST."
+        },
+        {
+          "label": "Hito 6: Preparación de la plataforma para la publicación y visualización de datos en formato OCDS y OC4IDS sobre los procesos de contratación pública.",
+          "value": "Hito 6: Preparación de la plataforma para la publicación y visualización de datos en formato OCDS y OC4IDS sobre los procesos de contratación pública."
+        },
+        {
+          "label": "Hito 7: Publicación de datos OCDS y OC4IDS con una licencia de datos abiertos en línea con una política de publicación clara, que incluya visualizadores dinámicos.",
+          "value": "Hito 7: Publicación de datos OCDS y OC4IDS con una licencia de datos abiertos en línea con una política de publicación clara, que incluya visualizadores dinámicos."
+        },
+        {
+          "label": "Hito 8: Promoción del uso de los datos publicados. (Usar: Visualizar. Analizar. Comparar. Hacer una diferencia)",
+          "value": "Hito 8: Promoción del uso de los datos publicados. (Usar: Visualizar. Analizar. Comparar. Hacer una diferencia)"
+        },
+        {
+          "label": "Hito 9: Definición de indicadores que permitan la evaluación y mejoramiento de la calidad de los datos y la usabilidad, así como la medición del uso y monitoreo de los procedimientos de régimen común y el nivel de participación de los proveedores en los procedimientos de contratación pública, mismos que permitirán el mejoramiento continuo de los procesos del Sistema Nacional de Contratación Pública.",
+          "value": "Hito 9: Definición de indicadores que permitan la evaluación y mejoramiento de la calidad de los datos y la usabilidad, así como la medición del uso y monitoreo de los procedimientos de régimen común y el nivel de participación de los proveedores en los procedimientos de contratación pública, mismos que permitirán el mejoramiento continuo de los procesos del Sistema Nacional de Contratación Pública."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso3",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Plataforma de Información Abierta de Contratación Pública"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 4",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Análisis diagnóstico de congruencia del Acuerdo Regional sobre el Acceso a la Información, la Participación Pública y el Acceso a la Justicia en Asuntos Ambientales en América Latina y el Caribe con el marco político, normativo e institucional vigente.",
+          "value": "Hito 1: Análisis diagnóstico de congruencia del Acuerdo Regional sobre el Acceso a la Información, la Participación Pública y el Acceso a la Justicia en Asuntos Ambientales en América Latina y el Caribe con el marco político, normativo e institucional vigente."
+        },
+        {
+          "label": "Hito 2: Articulación de organizaciones de la sociedad civil, academia y movimientos locales que promueven el Acuerdo de Escazú en una Plataforma u Observatorio Ambiental a nivel nacional formado virtual y/o presencialmente para aportar al proceso de implementación del Acuerdo, así como vigilar el cumplimiento de los compromisos (hoja de ruta) que se determinen.",
+          "value": "Hito 2: Articulación de organizaciones de la sociedad civil, academia y movimientos locales que promueven el Acuerdo de Escazú en una Plataforma u Observatorio Ambiental a nivel nacional formado virtual y/o presencialmente para aportar al proceso de implementación del Acuerdo, así como vigilar el cumplimiento de los compromisos (hoja de ruta) que se determinen."
+        },
+        {
+          "label": "Hito 3: Co-construcción de propuestas y hoja de ruta para avanzar en el proceso de implementación de las disposiciones del Acuerdo de Escazú en el marco político, normativo e institucional.",
+          "value": "Hito 3: Co-construcción de propuestas y hoja de ruta para avanzar en el proceso de implementación de las disposiciones del Acuerdo de Escazú en el marco político, normativo e institucional."
+        },
+        {
+          "label": "Hito 4: Implementación de hoja de ruta para finalizar el proceso de ratificación.",
+          "value": "Hito 4: Implementación de hoja de ruta para finalizar el proceso de ratificación."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoCompromiso4",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Implementación de los derechos de participación y acceso a la información ambiental (Escazú)"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 5",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Conformar el Grupo Multiparticipe, a partir de un mapeo de actores en distintos sectores relacionados con la transparencia financiera en las industrias extractivas (petróleo, gas y minería).",
+          "value": "Hito 1: Conformar el Grupo Multiparticipe, a partir de un mapeo de actores en distintos sectores relacionados con la transparencia financiera en las industrias extractivas (petróleo, gas y minería)."
+        },
+        {
+          "label": "Hito 2: Modelo de gestión co-creado con el Grupo Multiparticipe para el proceso de representatividad ante la propia comisión.",
+          "value": "Hito 2: Modelo de gestión co-creado con el Grupo Multiparticipe para el proceso de representatividad ante la propia comisión."
+        },
+        {
+          "label": "Hito 3: Realizar de manera colaborativa el Plan de Acción relacionado con la transparencia en las industrias extractivas (petróleo, gas y minería) en Ecuador, que tome como referencia los resultados del Estudio de Viabilidad para Informar la Decisión de Adhesión de Ecuador al Estándar de Transparencia de las Industrias Extractivas (EITI).",
+          "value": "Hito 3: Realizar de manera colaborativa el Plan de Acción relacionado con la transparencia en las industrias extractivas (petróleo, gas y minería) en Ecuador, que tome como referencia los resultados del Estudio de Viabilidad para Informar la Decisión de Adhesión de Ecuador al Estándar de Transparencia de las Industrias Extractivas (EITI)."
+        },
+        {
+          "label": "Hito 4: Inicio de la implementación de la hoja de ruta para mejorar la transparencia en las industrias extractivas (petróleo, gas y minería) en Ecuador.",
+          "value": "Hito 4: Inicio de la implementación de la hoja de ruta para mejorar la transparencia en las industrias extractivas (petróleo, gas y minería) en Ecuador."
+        },
+        {
+          "label": "Hito 5: Evaluación de los avances de la implementación de la hoja de ruta para mejorar la transparencia en las industrias extractivas (petróleo, gas y minería) en Ecuador.",
+          "value": "Hito 5: Evaluación de los avances de la implementación de la hoja de ruta para mejorar la transparencia en las industrias extractivas (petróleo, gas y minería) en Ecuador."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoCompromiso5",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Co-diseño de la hoja de ruta para la implementación del Estándar EITI para mejorar la transparencia en las industrias extractivas en Ecuador (petróleo, gas y minería)"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 6",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Levantamiento de un diagnóstico sobre la aplicabilidad y cumplimiento de la Ley Orgánica de Transparencia y Acceso a la Información Pública, específicamente lo relativo a transparencia activa y pasiva, con la participación de la academia, ciudadanía y actores obligados a cumplir con la LOTAIP.",
+          "value": "Hito 1: Levantamiento de un diagnóstico sobre la aplicabilidad y cumplimiento de la Ley Orgánica de Transparencia y Acceso a la Información Pública, específicamente lo relativo a transparencia activa y pasiva, con la participación de la academia, ciudadanía y actores obligados a cumplir con la LOTAIP."
+        },
+        {
+          "label": "Hito 2: Co-creación de una estrategia para el fortalecimiento de mecanismos relacionados con el cumplimiento de la transparencia activa y pasiva.",
+          "value": "Hito 2: Co-creación de una estrategia para el fortalecimiento de mecanismos relacionados con el cumplimiento de la transparencia activa y pasiva."
+        },
+        {
+          "label": "Hito 3: Inicio de la implementación de la estrategia para el fortalecimiento de mecanismos relacionados con el cumplimiento de la transparencia activa y pasiva.",
+          "value": "Hito 3: Inicio de la implementación de la estrategia para el fortalecimiento de mecanismos relacionados con el cumplimiento de la transparencia activa y pasiva."
+        },
+        {
+          "label": "Hito 4: Evaluación participativa de los avances de implementación de la estrategia para el fortalecimiento de mecanismos relacionados con el cumplimiento de la transparencia activa y pasiva, implementada.",
+          "value": "Hito 4: Evaluación participativa de los avances de implementación de la estrategia para el fortalecimiento de mecanismos relacionados con el cumplimiento de la transparencia activa y pasiva, implementada."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso6",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Desarrollo de capacidades para garantizar la transparencia y el acceso a la información pública"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 7",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Definición de una metodología y hoja de ruta para la co-creación del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género.",
+          "value": "Hito 1: Definición de una metodología y hoja de ruta para la co-creación del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género."
+        },
+        {
+          "label": "Hito 2: Elaboración de un mapeo de actores gubernamentales, sociedad civil y academia, nacionales, subnacionales e internacionales estratégicos relacionados con género, la disminución de violencia contra las mujeres y de género y diversidad sexo-genérica.",
+          "value": "Hito 2: Elaboración de un mapeo de actores gubernamentales, sociedad civil y academia, nacionales, subnacionales e internacionales estratégicos relacionados con género, la disminución de violencia contra las mujeres y de género y diversidad sexo-genérica."
+        },
+        {
+          "label": "Hito 3: Creación de un observatorio ciudadano de violencia de género y diversidades sexo-genéricas, para el apoyo a la vigilancia y seguimiento al cumplimiento de las políticas e instrumentos de prevención y erradicación de violencia de género y diversidades sexo-genéricas.",
+          "value": "Hito 3: Creación de un observatorio ciudadano de violencia de género y diversidades sexo-genéricas, para el apoyo a la vigilancia y seguimiento al cumplimiento de las políticas e instrumentos de prevención y erradicación de violencia de género y diversidades sexo-genéricas."
+        },
+        {
+          "label": "Hito 4: Identificación, consolidación y análisis, de manera colaborativa, de la información disponible* (misma que se ampliará a medida de sus avances) relacionada con temas de violencia contra las mujeres, basada en género, y diversidades sexo-genérica en todas sus expresiones.",
+          "value": "Hito 4: Identificación, consolidación y análisis, de manera colaborativa, de la información disponible* (misma que se ampliará a medida de sus avances) relacionada con temas de violencia contra las mujeres, basada en género, y diversidades sexo-genérica en todas sus expresiones."
+        },
+        {
+          "label": "Hito 5: Desarrollar al menos 12 talleres en territorio, con la participación de diversos actores para socializar los avances del diseño de la planificación para la prevención y erradicación de la violencia contra las mujeres y recoger aportes que complementen el componente de planificación para la prevención y erradicación de la violencia de diversidades sexo-genéricas como parte del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género.",
+          "value": "Hito 5: Desarrollar al menos 12 talleres en territorio, con la participación de diversos actores para socializar los avances del diseño de la planificación para la prevención y erradicación de la violencia contra las mujeres y recoger aportes que complementen el componente de planificación para la prevención y erradicación de la violencia de diversidades sexo-genéricas como parte del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género."
+        },
+        {
+          "label": "Hito 6: Sistematización y elaboración del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género.",
+          "value": "Hito 6: Sistematización y elaboración del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género."
+        },
+        {
+          "label": "Hito 7: Publicación, lanzamiento, difusión y sensibilización del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género.",
+          "value": "Hito 7: Publicación, lanzamiento, difusión y sensibilización del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género."
+        },
+        {
+          "label": "Hito 8: Informe de avance de implementación del componente para la prevención y erradicación de la violencia contra las mujeres, en el marco del Plan Nacional.",
+          "value": "Hito 8: Informe de avance de implementación del componente para la prevención y erradicación de la violencia contra las mujeres, en el marco del Plan Nacional."
+        },
+        {
+          "label": "Hito 9: Informe de avance de implementación del componente para la prevención y erradicación de la violencia contra las diversidades sexo-genéricas, en el marco del Plan Nacional.",
+          "value": "Hito 9: Informe de avance de implementación del componente para la prevención y erradicación de la violencia contra las diversidades sexo-genéricas, en el marco del Plan Nacional."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso7",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Co-creación del Plan Nacional de Prevención y Erradicación de la Violencia contra las Mujeres y de Género y creación de un observatorio ciudadano de violencia de género y diversidades sexo-genéricas"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 8",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Capacitación en innovación del servicio público al equipo técnico multiactor que formará el laboratorio de innovación.",
+          "value": "Hito 1: Capacitación en innovación del servicio público al equipo técnico multiactor que formará el laboratorio de innovación."
+        },
+        {
+          "label": "Hito 2: Diagnóstico de contexto, actores, alianzas estratégicas y necesidades para la creación e implementación del laboratorio, con aportes ciudadanos.",
+          "value": "Hito 2: Diagnóstico de contexto, actores, alianzas estratégicas y necesidades para la creación e implementación del laboratorio, con aportes ciudadanos."
+        },
+        {
+          "label": "Hito 3: Diseño del modelo de gestión del laboratorio, que incluya procesos y metodologías de innovación.",
+          "value": "Hito 3: Diseño del modelo de gestión del laboratorio, que incluya procesos y metodologías de innovación."
+        },
+        {
+          "label": "Hito 4: Lanzamiento del laboratorio de innovación y convocatoria para al menos un reto de co-creación nacional.",
+          "value": "Hito 4: Lanzamiento del laboratorio de innovación y convocatoria para al menos un reto de co-creación nacional."
+        },
+        {
+          "label": "Hito 5: Implementación del proyecto piloto identificado en el laboratorio que utilice procesos y metodologías de innovación basadas en inteligencia colectiva.",
+          "value": "Hito 5: Implementación del proyecto piloto identificado en el laboratorio que utilice procesos y metodologías de innovación basadas en inteligencia colectiva."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso8",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Primer laboratorio de innovación ciudadana de Ecuador"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 9",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Elaboración de la norma técnica de mejora regulatoria y actualización de la norma de simplificación de trámites, de manera conjunta con los actores involucrados y la sociedad civil.",
+          "value": "Hito 1: Elaboración de la norma técnica de mejora regulatoria y actualización de la norma de simplificación de trámites, de manera conjunta con los actores involucrados y la sociedad civil."
+        },
+        {
+          "label": "Hito 2: Co-creación del Plan de Mejora Regulatoria y Simplificación de Trámites en conjunto con las instituciones y ciudadanía.",
+          "value": "Hito 2: Co-creación del Plan de Mejora Regulatoria y Simplificación de Trámites en conjunto con las instituciones y ciudadanía."
+        },
+        {
+          "label": "Hito 3: Implementación del Plan de Mejora Regulatoria y Simplificación de Trámites.",
+          "value": "Hito 3: Implementación del Plan de Mejora Regulatoria y Simplificación de Trámites."
+        },
+        {
+          "label": "Hito 4: Co-diseño del sistema único de seguimiento a la simplificación de trámites y regulaciones, y puesta en producción.",
+          "value": "Hito 4: Co-diseño del sistema único de seguimiento a la simplificación de trámites y regulaciones, y puesta en producción."
+        },
+        {
+          "label": "Hito 5: Creación de un observatorio ciudadano para el control social sobre la implementación del Plan de Mejora Regulatoria y Simplificación de Trámites.",
+          "value": "Hito 5: Creación de un observatorio ciudadano para el control social sobre la implementación del Plan de Mejora Regulatoria y Simplificación de Trámites."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso9",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Ciudadanización de la mejora de los trámites (simplificación)"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "Nombre hito del compromiso 10",
+    "widget": "choicesjs",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Hito 1: Capacitación a las instituciones en la metodología de medición de la percepción de calidad de los servicios públicos.",
+          "value": "Hito 1: Capacitación a las instituciones en la metodología de medición de la percepción de calidad de los servicios públicos."
+        },
+        {
+          "label": "Hito 2: Socialización a los ciudadanos sobre la medición de la percepción de calidad de los servicios públicos.",
+          "value": "Hito 2: Socialización a los ciudadanos sobre la medición de la percepción de calidad de los servicios públicos."
+        },
+        {
+          "label": "Hito 3: Medición de la calidad de los servicios públicos mediante encuestas en línea (frecuencia semestral).",
+          "value": "Hito 3: Medición de la calidad de los servicios públicos mediante encuestas en línea (frecuencia semestral)."
+        },
+        {
+          "label": "Hito 4: Análisis de resultados, identificación de las áreas de mejora y la co-creación de una estrategia de mejora con el aporte de usuarios y actores no gubernamentales relacionados.",
+          "value": "Hito 4: Análisis de resultados, identificación de las áreas de mejora y la co-creación de una estrategia de mejora con el aporte de usuarios y actores no gubernamentales relacionados."
+        },
+        {
+          "label": "Hito 5: Implementación de los planes de mejora para aumentar la satisfacción de la calidad de los servicios",
+          "value": "Hito 5: Implementación de los planes de mejora para aumentar la satisfacción de la calidad de los servicios"
+        },
+        {
+          "label": "Hito 6: Comunicación de resultados de mejoras de la calidad de los servicios públicos con la aplicación de la estrategia co-creada.",
+          "value": "Hito 6: Comunicación de resultados de mejoras de la calidad de los servicios públicos con la aplicación de la estrategia co-creada."
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "nombreHitoDelCompromiso10",
+    "conditional": {
+      "show": true,
+      "when": "datosGeneralesNombreDelCompromiso",
+      "eq": "Co-creación de una estrategia para la mejora de la Calidad de los Servicios Públicos de la Función Ejecutiva"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "[Datos generales] Fecha de registro del formulario",
+    "format": "yyyy-MM-dd",
+    "description": "Ejemplo: 2021-11-09",
+    "tableView": false,
+    "enableMinDateInput": false,
+    "datePicker": {
+      "disableWeekends": false,
+      "disableWeekdays": false
+    },
+    "enableMaxDateInput": false,
+    "validate": {
+      "required": true
+    },
+    "key": "datosGeneralesFechaDeRegistroDelFormulario1",
+    "type": "datetime",
+    "input": true,
+    "widget": {
+      "type": "calendar",
+      "displayInTimezone": "viewer",
+      "locale": "en",
+      "useLocaleSettings": false,
+      "allowInput": true,
+      "mode": "single",
+      "enableTime": true,
+      "noCalendar": false,
+      "format": "yyyy-MM-dd",
+      "hourIncrement": 1,
+      "minuteIncrement": 1,
+      "time_24hr": false,
+      "minDate": null,
+      "disableWeekends": false,
+      "disableWeekdays": false,
+      "maxDate": null
+    }
+  },
+  {
+    "label": "[Datos generales] Descripción de avance del hito",
+    "description": "Ejemplo: El hito ha consistido en realizar una serie de actividades de integración ciudadana para garantizar la participación de distintos sectores.",
+    "autoExpand": false,
+    "tableView": true,
+    "validate": {
+      "required": true
+    },
+    "key": "datosGeneralesDescripcionDeAvanceDelHito",
+    "type": "textarea",
+    "input": true
+  },
+  {
+    "label": "[Indicador 1] Escriba el porcentaje de avance de implementación del hito",
+    "description": "Por favor agregar un número del 0 al 100\nEjemplo: 50%",
+    "suffix": "%",
+    "mask": false,
+    "tableView": false,
+    "delimiter": false,
+    "requireDecimal": false,
+    "inputFormat": "plain",
+    "validate": {
+      "required": true,
+      "min": 0,
+      "max": 100
+    },
+    "key": "indicador1CualEsElPorcentajeDeAvanceDeImplementacionDelHito",
+    "type": "number",
+    "input": true
+  },
+  {
+    "label": "[Indicador 2] ¿Cuál es el estado de cumplimiento del hito?",
+    "widget": "choicesjs",
+    "description": "Ejemplo: Planificación",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Definición",
+          "value": "Definición"
+        },
+        {
+          "label": "Planificación",
+          "value": "Planificación"
+        },
+        {
+          "label": "Ejecución",
+          "value": "Ejecución"
+        },
+        {
+          "label": "Completado",
+          "value": "Completado"
+        },
+        {
+          "label": "Detenido",
+          "value": "Detenido"
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "indicador2CualEsElEstadoDeCumplimientoDelHito",
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "[Indicador 3] De acuerdo al avance actual del hito ¿La contraparte ha respondido con sus responsabilidades con la entidad responsable durante el compromiso?",
+    "widget": "choicesjs",
+    "description": "Ejemplo: Sí",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Sí",
+          "value": "Sí"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "indicador3DeAcuerdoAlAvanceActualDelHitoLaEntidadResponsableHaRespondidoConSusResponsabilidadesConLaContraparteDuranteElCompromiso",
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "[Indicador 3] (Justificación) [Indicador 3] De acuerdo al avance actual del hito ¿La contraparte ha respondido con sus responsabilidades con la entidad responsable durante el compromiso?",
+    "description": "Ejemplo: La contraparte ha logrado cumplir a cabalidad con los acuerdos y cronograma de cumplimiento del hito",
+    "autoExpand": false,
+    "tableView": true,
+    "inputFormat": "plain",
+    "key": "indicador3JustificacionDeAcuerdoAlAvanceActualDelHitoLaEntidadResponsableHaRespondidoConSusResponsabilidadesConLaContraparteDuranteElCompromiso",
+    "type": "textarea",
+    "input": true
+  },
+  {
+    "label": "[Indicador 4] De acuerdo al avance actual del hito ¿Cuántas actividades se realizaron con la inclusión de otros actores relevantes en el compromiso?",
+    "description": "Por favor agregar un número\nEjemplo: 10",
+    "mask": false,
+    "tableView": false,
+    "delimiter": false,
+    "requireDecimal": false,
+    "inputFormat": "plain",
+    "validate": {
+      "required": true,
+      "min": 0
+    },
+    "key": "indicador4DeAcuerdoAlAvanceActualDelHitoCuantasActividadesSeRealizaronConLaInclusionDeOtrosActoresRelevantesEnElCompromiso",
+    "type": "number",
+    "input": true
+  },
+  {
+    "label": "[Indicador 4] De acuerdo al avance actual del hito ¿Cuáles actividades se realizaron con la inclusión de otros actores relevantes en el compromiso?",
+    "description": "Ejemplo: Se realizaron 3 webinars y 2 ejercicios pedagógicos abiertos a la ciudadanía.",
+    "autoExpand": false,
+    "tableView": true,
+    "key": "indicador4DeAcuerdoAlAvanceActualDelHitoCualesActividadesSeRealizaronConLaInclusionDeOtrosActoresRelevantesEnElCompromiso",
+    "type": "textarea",
+    "input": true
+  },
+  {
+    "label": "[Indicador 5] De acuerdo al avance actual del hito ¿Cuántas personas participaron en cada uno de los hitos?",
+    "description": "Por favor agregar un número\nEjemplo: 500",
+    "mask": false,
+    "tableView": false,
+    "delimiter": false,
+    "requireDecimal": false,
+    "inputFormat": "plain",
+    "validate": {
+      "required": true,
+      "min": 0
+    },
+    "key": "indicador5DeAcuerdoAlAvanceActualDelHitoCuantasPersonasParticiparonEnCadaUnoDeLosHitos",
+    "type": "number",
+    "input": true
+  },
+  {
+    "label": "[Indicador 6] De acuerdo al avance actual del hito ¿A qué sectores pertenecen los participantes de las actividades en cada hito de los compromisos?",
+    "widget": "choicesjs",
+    "description": "Es posible seleccionar más de una opción\nEjemplo: Academia y Empresa privada",
+    "tableView": true,
+    "multiple": true,
+    "data": {
+      "values": [
+        {
+          "label": "Sociedad Civil",
+          "value": "Sociedad Civil"
+        },
+        {
+          "label": "Entidad pública",
+          "value": "Entidad pública"
+        },
+        {
+          "label": "Academia",
+          "value": "Academia"
+        },
+        {
+          "label": "Ciudadanía general",
+          "value": "Ciudadanía general"
+        },
+        {
+          "label": " Empresa privada",
+          "value": " Empresa privada"
+        },
+        {
+          "label": "Organismo multilateral",
+          "value": "Organismo multilateral"
+        },
+        {
+          "label": "Otro",
+          "value": "Otro"
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "indicador6DeAcuerdoAlAvanceActualDelHitoAQueSectoresPertenecenLosParticipantesDeLasActividadesEnCadaHitoDeLosCompromisos",
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "[Indicador 6] Por favor indicar el nombre del nuevo sector",
+    "autoExpand": false,
+    "tableView": true,
+    "key": "indicador6PorFavorIndicarElNombreDelNuevoSector",
+    "customConditional": "show = data.indicador6DeAcuerdoAlAvanceActualDelHitoAQueSectoresPertenecenLosParticipantesDeLasActividadesEnCadaHitoDeLosCompromisos.length && data.indicador6DeAcuerdoAlAvanceActualDelHitoAQueSectoresPertenecenLosParticipantesDeLasActividadesEnCadaHitoDeLosCompromisos.includes('Otro')",
+    "type": "textarea",
+    "rows": 1,
+    "input": true
+  },
+  {
+    "label": "[Indicador 7] Descripción de la realidad inicial previa a la implementación del hito del compromiso",
+    "description": "Ejemplo: No existen espacios de interacción ciudadana para el desarrollo de procesos de apertura de las instituciones públicas.",
+    "autoExpand": false,
+    "tableView": true,
+    "validate": {
+      "required": true
+    },
+    "key": "indicador7DescripcionDeLaRealidadInicialPreviaALaImplementacionDelHitoDelCompromiso",
+    "type": "textarea",
+    "input": true
+  },
+  {
+    "label": "[Indicador 7] De acuerdo al estado actual del hito, realice una descripción de la realidad una vez implementado o avanzado el hito del compromiso",
+    "description": "Ejemplo: Con el hito se han podido crear espacios de interacción ciudadana para el desarrollo de procesos de apertura de las instituciones públicas.",
+    "autoExpand": false,
+    "tableView": true,
+    "validate": {
+      "required": true
+    },
+    "key": "indicador7DeAcuerdoAlEstadoActualDelHitoRealiceUnaDescripcionDeLaRealidadUnaVezImplementadoOAvanzadoElHitoDelCompromiso",
+    "type": "textarea",
+    "input": true
+  },
+  {
+    "label": "[Indicador 8] De acuerdo al avance actual del hito ¿El hito se relaciona con alguna iniciativa internacional ligada con Gobierno Abierto? ",
+    "widget": "choicesjs",
+    "description": "Ejemplo: Sí",
+    "tableView": true,
+    "data": {
+      "values": [
+        {
+          "label": "Sí",
+          "value": "Sí"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "indicador8DeAcuerdoAlAvanceActualDelHitoElHitoSeRelacionaConAlgunaIniciativaInternacionalLigadaConGobiernoAbierto",
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "[Indicador 8] ¿El hito se relaciona con alguna iniciativa internacional ligada con Gobierno Abierto? ¿Cuál?",
+    "widget": "choicesjs",
+    "description": "Puede seleccionar más de una opción\nEjemplo: OGP (Alianza de Gobierno Abierto) Local",
+    "tableView": true,
+    "multiple": true,
+    "data": {
+      "values": [
+        {
+          "label": "Objetivos de Desarrollo Sostenible",
+          "value": "Objetivos de Desarrollo Sostenible"
+        },
+        {
+          "label": "Acuerdo de Escazú",
+          "value": "Acuerdo de Escazú"
+        },
+        {
+          "label": "EITI (Iniciativa de Transparencia en la Industria Extractiva)",
+          "value": "EITI (Iniciativa de Transparencia en la Industria Extractiva)"
+        },
+        {
+          "label": "Open Contracting",
+          "value": "Open Contracting"
+        },
+        {
+          "label": "Open Data Charter",
+          "value": "Open Data Charter"
+        },
+        {
+          "label": "OGP (Alianza de Gobierno Abierto) Local ",
+          "value": "OGP (Alianza de Gobierno Abierto) Local "
+        },
+        {
+          "label": "GIFT (Iniciativa Global para la Transparencia Fiscal)",
+          "value": "GIFT (Iniciativa Global para la Transparencia Fiscal)"
+        },
+        {
+          "label": "FITI (Iniciativa de Transparencia en la pesca)",
+          "value": "FITI (Iniciativa de Transparencia en la pesca)"
+        },
+        {
+          "label": "Feminist Open Government Initiative",
+          "value": "Feminist Open Government Initiative"
+        },
+        {
+          "label": "Otro",
+          "value": "Otro"
+        }
+      ]
+    },
+    "validate": {
+      "required": true
+    },
+    "key": "indicador8ElHitoSeRelacionaConAlgunaIniciativaInternacionalLigadaConGobiernoAbiertoCual",
+    "conditional": {
+      "show": true,
+      "when": "indicador8DeAcuerdoAlAvanceActualDelHitoElHitoSeRelacionaConAlgunaIniciativaInternacionalLigadaConGobiernoAbierto",
+      "eq": "Sí"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "[Indicador 8] ¿Con qué puntos en concreto de los ODS se relaciona el hito?",
+    "widget": "choicesjs",
+    "tableView": true,
+    "multiple": true,
+    "data": {
+      "values": [
+        {
+          "label": "Objetivo 1",
+          "value": "objetivo1"
+        },
+        {
+          "label": "Objetivo 2",
+          "value": "objetivo2"
+        },
+        {
+          "label": "Objetivo 3",
+          "value": "objetivo3"
+        },
+        {
+          "label": "Objetivo 4",
+          "value": "objetivo4"
+        },
+        {
+          "label": "Objetivo 5",
+          "value": "objetivo5"
+        },
+        {
+          "label": "Objetivo 6",
+          "value": "objetivo6"
+        },
+        {
+          "label": "Objetivo 7",
+          "value": "objetivo7"
+        },
+        {
+          "label": "Objetivo 8",
+          "value": "objetivo8"
+        },
+        {
+          "label": "Objetivo 9",
+          "value": "objetivo9"
+        },
+        {
+          "label": "Objetivo 10",
+          "value": "objetivo10"
+        },
+        {
+          "label": "Objetivo 11",
+          "value": "objetivo11"
+        },
+        {
+          "label": "Objetivo 12",
+          "value": "objetivo12"
+        },
+        {
+          "label": "Objetivo 13",
+          "value": "objetivo13"
+        },
+        {
+          "label": "Objetivo 14",
+          "value": "objetivo14"
+        },
+        {
+          "label": "Objetivo 15",
+          "value": "objetivo15"
+        },
+        {
+          "label": "Objetivo 16",
+          "value": "objetivo16"
+        },
+        {
+          "label": "Objetivo 17",
+          "value": "objetivo17"
+        }
+      ]
+    },
+    "key": "indicador8ConQuePuntoEnConcretoDeLosOdsSeRelacionaElHito",
+    "conditional": {
+      "show": true,
+      "when": "indicador8ElHitoSeRelacionaConAlgunaIniciativaInternacionalLigadaConGobiernoAbiertoCual",
+      "eq": "Objetivos de Desarrollo Sostenible"
+    },
+    "type": "select",
+    "input": true
+  },
+  {
+    "label": "[Indicador 8] ¿Con qué punto en concreto de la iniciativa internacional se relaciona el hito?",
+    "description": "Ejemplo: Acuerdo de Ezcazú - Artículo 5",
+    "autoExpand": false,
+    "tableView": true,
+    "key": "indicador8ConQuePuntoEnConcretoDeLaIniciativaInternacionalSeRelacionaElHito",
+    "conditional": {
+      "show": true,
+      "when": "indicador8DeAcuerdoAlAvanceActualDelHitoElHitoSeRelacionaConAlgunaIniciativaInternacionalLigadaConGobiernoAbierto",
+      "eq": "Sí"
+    },
+    "type": "textarea",
+    "rows": 1,
+    "input": true
+  },
+  {
+    "label": "[Indicador 8] (Justificación) Con qué punto en concreto de la iniciativa internacional se relaciona el hito",
+    "description": "Ejemplo: ODS 16: Contar con la política y guía de datos abiertos permite fortalecer la gestión institucional en transparencia, participación y colaboración ciudadana.",
+    "autoExpand": false,
+    "tableView": true,
+    "key": "indicador8ConQuePuntoEnConcretoDeLaIniciativaInternacionalSeRelacionaElHitoJustificacion",
+    "conditional": {
+      "show": true,
+      "when": "indicador8DeAcuerdoAlAvanceActualDelHitoElHitoSeRelacionaConAlgunaIniciativaInternacionalLigadaConGobiernoAbierto",
+      "eq": "Sí"
+    },
+    "type": "textarea",
+    "input": true
+  },
+  {
+    "label": "Enviar",
+    "showValidations": false,
+    "disableOnInvalid": true,
+    "tableView": false,
+    "key": "submit",
+    "type": "button",
+    "input": true,
+    "saveOnEnter": false
+  }
+]
